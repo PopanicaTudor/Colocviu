@@ -3,8 +3,11 @@
 #include <fstream>
 
 // Constructor
-Workshop::Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit)
-    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) {}
+Workshop::Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit, const std::string& city)
+    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) 
+{
+    saveEventToCSV(city); // Save event to CSV
+}
 
 // Destructor
 Workshop::~Workshop() {}
@@ -30,7 +33,7 @@ void Workshop::saveEventToCSV(const std::string &city) const
     std::ofstream file(filePath, std::ios::app);
     if (file.is_open())
     {
-        file << name << "," << date << "," << cost << "," << topic << "," << participantLimit << "\n";
+        file << name << "," << date << "," << cost << "," << "Workshop" << ",\"Workshop Topic: " << topic << ",Participants Limit: " << participantLimit << "\"\n";
         file.close();
     }
     else

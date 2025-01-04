@@ -3,10 +3,10 @@
 #include <fstream>
 
 // Constructor
-CoffeeTasting::CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes)
+CoffeeTasting::CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes, const std::string& city)
     : Event(name, date, cost, city), coffeeTypes(coffeeTypes)
 {
-    saveEventToCSV("events.csv");
+    saveEventToCSV(city); // Save event to CSV
 }
 
 // Destructor
@@ -16,10 +16,10 @@ CoffeeTasting::~CoffeeTasting() {}
 void CoffeeTasting::displayDetails() const
 {
     Event::displayDetails();
-    std::cout << "Tipuri cafea: ";
-    for (const auto& type : coffeeTypes)
+    std::cout << "Tipuri cafea: " << coffeeTypes.front();
+    for (size_t i = 1; i < coffeeTypes.size(); i++)
     {
-        std::cout << type << " ";
+        std::cout << ", " << coffeeTypes[i];
     }
     std::cout << "\n";
 }
@@ -38,12 +38,14 @@ void CoffeeTasting::saveEventToCSV(const std::string &city) const
     std::ofstream file(filePath, std::ios::app);
     if (file.is_open())
     {
-        file << name << "," << date << "," << cost;
-        for (const auto& type : coffeeTypes)
+        file << name << "," << date << "," << cost << "," << "Coffee Tasting";
+
+        file << ",\"Coffee Types: " << coffeeTypes.front();
+        for (size_t i = 1; i < coffeeTypes.size(); i++)
         {
-            file << "," << type;
+            file << ", " << coffeeTypes[i];
         }
-        file << "\n";
+        file << "\"\n";
         file.close();
     }
     else

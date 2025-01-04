@@ -3,8 +3,11 @@
 #include <fstream>
 
 // Constructor
-MovieNight::MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime)
-    : Event(name, date, cost, city), movieTitle(movieTitle), startTime(startTime) {}
+MovieNight::MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime, const std::string& city)
+    : Event(name, date, cost, city), movieTitle(movieTitle), startTime(startTime)
+{
+    saveEventToCSV(city); // Save event to CSV
+}
 
 // Destructor
 MovieNight::~MovieNight() {}
@@ -30,7 +33,7 @@ void MovieNight::saveEventToCSV(const std::string &city) const
     std::ofstream file(filePath, std::ios::app);
     if (file.is_open())
     {
-        file << name << "," << date << "," << cost << "," << movieTitle << "," << startTime << "\n";
+        file << name << "," << date << "," << cost << "," << "Movie Night" << ",\"Movie Name: " << movieTitle << ",Hour: " << startTime << "\"\n";
         file.close();
     }
     else

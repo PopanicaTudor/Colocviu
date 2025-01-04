@@ -10,12 +10,12 @@ private:
     std::string startTime;
 
 public:
-    MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime);
+    MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime, const std::string& city);
     ~MovieNight();
 
     void displayDetails() const override;
     void performEventAction() const override;
-    void saveEventToCSV(const std::string& filePath) const;
+    void saveEventToCSV(const std::string& filePath) const override;
 };
 
 #endif

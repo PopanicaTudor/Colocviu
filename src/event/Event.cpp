@@ -24,6 +24,11 @@ double Event::getCost() const
     return cost;
 }
 
+std::string Event::getCity() const
+{
+    return city;
+}
+
 // Setters
 void Event::setName(const std::string& name)
 {
@@ -38,6 +43,11 @@ void Event::setDate(const std::string& date)
 void Event::setCost(double cost)
 {
     this->cost = cost;
+}
+
+void Event::setCity(const std::string &city)
+{
+    this->city = city;
 }
 
 // Display event details

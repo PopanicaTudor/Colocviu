@@ -10,12 +10,12 @@ private:
     int participantLimit;
 
 public:
-    Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit);
+    Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit, const std::string& city);
     ~Workshop();
 
     void displayDetails() const override;
     void performEventAction() const override;
-    void saveEventToCSV(const std::string& filePath) const;
+    void saveEventToCSV(const std::string& filePath) const override;
 };
 
 #endif

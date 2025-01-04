@@ -26,8 +26,9 @@ public:
     void setCost(double cost);
     void setCity(const std::string &city);
 
-    virtual void displayDetails() const;
+    virtual void displayDetails() const = 0;
     virtual void performEventAction() const = 0;
+    virtual void saveEventToCSV(const std::string &filePath) const = 0;
 };
 
 #endif

@@ -16,6 +16,8 @@
 #include <map>
 #include <algorithm>
 #include <fstream>
+#include <ctime>
+#include <iomanip>
 
 std::string selectCity()
 {
@@ -142,6 +144,14 @@ int main()
                 row.at("Name"),
                 std::stod(row.at("Price")),
                 std::stoi(row.at("Stock"))));
+        }
+
+        // Check if the events file is empty and add header if necessary
+        infile.open(eventsFilePath);
+        if (infile.peek() == std::ifstream::traits_type::eof())
+        {
+            std::ofstream outfile(eventsFilePath);
+            outfile << "Name,Date,Cost,Type,AdditionalInfo\n";
         }
 
         // Main menu loop
@@ -656,22 +666,31 @@ int main()
             {
                 std::cout << "\n\tOrganizare eveniment pentru " << selectedCity << ":\n";
 
+                std::unique_ptr<Event> event;
+
                 std::string eventName;
                 std::string eventDate;
                 double eventCost;
+
+                std::vector<std::string> coffeeTypes;
+                std::string topic;
+                int participantLimit = 0;
+                std::string movieTitle;
+                std::string startTime;
 
                 std::cout << "\n\tSelectati tipul de eveniment:\n";
                 std::cout << "1. Degustare de cafea\n";
                 std::cout << "2. Atelier\n";
                 std::cout << "3. Seara de film\n";
+                std::cout << "4. Anulare\n";
                 std::cout << "Optiune: ";
 
                 int eventChoice;
                 std::cin >> eventChoice;
 
+                // Selectați tipul de eveniment
                 if (eventChoice == 1)
                 {
-                    std::vector<std::string> coffeeTypes;
                     int noOfTypes;
 
                     std::cout << "Numar tipuri de cafea: ";
@@ -680,50 +699,96 @@ int main()
                     for (int i = 0; i < noOfTypes; i++)
                     {
                         std::string type;
-                        std::cout << "Tip cafea: ";
+
+                        std::cout << "Tip cafea " << i + 1 << ": ";
                         std::cin >> type;
                         coffeeTypes.push_back(type);
                     }
-
-                    std::unique_ptr<Event> coffeeTasting = std::make_unique<CoffeeTasting>(eventName, eventDate, eventCost, coffeeTypes);
-                    coffeeTasting->displayDetails();
-                    coffeeTasting->performEventAction();
                 }
                 else if (eventChoice == 2)
                 {
-                    std::string topic;
-                    int participantLimit;
-
                     std::cout << "Subiect: ";
-                    std::cin >> topic;
+                    std::cin.ignore(); // Clear the newline character left in the buffer
+                    std::getline(std::cin, topic);
                     std::cout << "Numar maxim participanti: ";
                     std::cin >> participantLimit;
-
-                    std::unique_ptr<Event> workshop = std::make_unique<Workshop>(eventName, eventDate, eventCost, topic, participantLimit);
-                    workshop->displayDetails();
-                    workshop->performEventAction();
                 }
                 else if (eventChoice == 3)
                 {
-                    std::string movieTitle;
-                    std::string startTime;
-
                     std::cout << "Titlu film: ";
-                    std::cin >> movieTitle;
+                    std::cin.ignore(); // Clear the newline character left in the buffer
+                    std::getline(std::cin, movieTitle);
                     std::cout << "Ora incepere: ";
                     std::cin >> startTime;
-
-                    std::unique_ptr<Event> movieNight = std::make_unique<MovieNight>(eventName, eventDate, eventCost, movieTitle, startTime);
-                    movieNight->displayDetails();
-                    movieNight->performEventAction();
+                }
+                else if (eventChoice == 4)
+                {
+                    break;
+                }
+                else
+                {
+                    std::cout << "Optiune invalida. Reincercati!\n";
+                    break;
                 }
 
+                // Citire nume eveniment
                 std::cout << "Nume eveniment: ";
-                std::cin >> eventName;
-                std::cout << "Data eveniment (ZZ/LL/AAAA): ";
-                std::cin >> eventDate;
+                std::cin.ignore(); // Clear the newline character left in the buffer
+                std::getline(std::cin, eventName);
+
+                // Verificare dată eveniment
+                time_t now = time(0);
+                tm *ltm = localtime(&now);
+
+                time_t eventTime;
+                do
+                {
+                    // Citire dată eveniment
+                    std::cout << "Data eveniment (ZZ/LL/AAAA): ";
+                    std::cin >> eventDate;
+
+                    struct tm eventTm = {};
+                    std::istringstream ss(eventDate);
+                    if (!(ss >> std::get_time(&eventTm, "%d/%m/%Y")))
+                    {
+                        std::cout << "Format invalid. Introduceti o data valida!\n";
+                        continue;
+                    }
+
+                    eventTime = mktime(&eventTm);
+
+                    if (difftime(eventTime, now) < 0)
+                    {
+                        std::cout << "Data evenimentului nu poate fi in trecut. Introduceti o data valida!\n";
+                    }
+                } while (difftime(eventTime, now) < 0);
+
+                // Citire cost eveniment
                 std::cout << "Cost eveniment: ";
                 std::cin >> eventCost;
+
+                // Creare obiect eveniment
+                if (eventChoice == 1)
+                {
+                    event = std::make_unique<CoffeeTasting>(eventName, eventDate, eventCost, coffeeTypes, selectedCity);
+                    event->displayDetails();
+                }
+                else if (eventChoice == 2)
+                {
+                    event = std::make_unique<Workshop>(eventName, eventDate, eventCost, topic, participantLimit, selectedCity);
+                    event->displayDetails();
+                }
+                else if (eventChoice == 3)
+                {
+                    event = std::make_unique<MovieNight>(eventName, eventDate, eventCost, movieTitle, startTime, selectedCity);
+                    event->displayDetails();
+                }
+                
+                // Efectuează acțiunea evenimentului dacă este este acceași zi
+                if (difftime(eventTime, now) == 0)
+                {
+                    event->performEventAction();
+                }
             }
             else if (mainChoice == 5)
             {

@@ -10,12 +10,12 @@ private:
     std::vector<std::string> coffeeTypes;
 
 public:
-    CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes);
+    CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes, const std::string& city);
     ~CoffeeTasting();
 
     void displayDetails() const override;
     void performEventAction() const override;
-    void saveEventToCSV(const std::string& filePath) const;
+    void saveEventToCSV(const std::string& filePath) const override;
 };
 
 #endif
