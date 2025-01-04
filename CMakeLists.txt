@@ -17,11 +17,14 @@ file(GLOB PRODUCT_SOURCES src/inventory/*.cpp)
 # Găsește fișierele sursă pentru Order
 file(GLOB ORDER_SOURCES src/order/*.cpp)
 
+# Găsește fișierele sursă pentru Report
+file(GLOB REPORT_SOURCES src/report/*.cpp)
+
 # Găsește fișierele sursă pentru CSVParser
 file(GLOB CSV_SOURCES src/util/CSVParser.cpp)
 
 # Creează executabilul
-add_executable(CoffeeJourney src/main.cpp ${EMPLOYEE_SOURCES} ${EVENT_SOURCES} ${PRODUCT_SOURCES} ${ORDER_SOURCES} ${CSV_SOURCES})
+add_executable(CoffeeJourney src/main.cpp ${EMPLOYEE_SOURCES} ${EVENT_SOURCES} ${PRODUCT_SOURCES} ${ORDER_SOURCES} ${REPORT_SOURCES} ${CSV_SOURCES})
 
 # Include toate fișierele sursă
 target_include_directories(CoffeeJourney PUBLIC src)

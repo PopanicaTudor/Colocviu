@@ -10,6 +10,7 @@
 #include "event/MovieNight.h"
 #include "event/Workshop.h"
 #include "event/CoffeeTasting.h"
+#include "report/Report.h"
 #include <memory>
 #include <vector>
 #include <string>
@@ -68,6 +69,7 @@ int main()
         std::string employeesFilePath = "../data/employees/" + selectedCity + ".csv";
         std::string productsFilePath = "../data/products/" + selectedCity + ".csv";
         std::string eventsFilePath = "../data/events/" + selectedCity + ".csv";
+        std::string reportsFilePath = "../data/reports/" + selectedCity + ".csv";
 
         // Check if the employees file is empty and add header if necessary
         std::ifstream infile(employeesFilePath);
@@ -162,7 +164,8 @@ int main()
             std::cout << "2. Gestionare produse\n";
             std::cout << "3. Simulare comanda\n";
             std::cout << "4. Organizare eveniment\n";
-            std::cout << "5. Inapoi la selectare oras\n";
+            std::cout << "5. Generare raport\n";
+            std::cout << "6. Inapoi la selectare oras\n";
             std::cout << "Optiune: ";
 
             int mainChoice;
@@ -783,14 +786,34 @@ int main()
                     event = std::make_unique<MovieNight>(eventName, eventDate, eventCost, movieTitle, startTime, selectedCity);
                     event->displayDetails();
                 }
+
+                // Creare currentDate dupa formatul DD/MM/YYYY
+                std::string currentDate = std::to_string(ltm->tm_mday) + "/" + std::to_string(1 + ltm->tm_mon) + "/" + std::to_string(1900 + ltm->tm_year);
                 
                 // Efectuează acțiunea evenimentului dacă este este acceași zi
-                if (difftime(eventTime, now) == 0)
+                if ( eventDate == currentDate)
                 {
                     event->performEventAction();
                 }
             }
             else if (mainChoice == 5)
+            {
+                std::cout << "\n\tGenerare raport pentru " << selectedCity << ":\n";
+
+                std::string reportDate;
+                std::cout << "Data raportului (ZZ/LL/AAAA): ";
+                std::cin >> reportDate;
+
+                // Creare obiect raport
+                Report report(reportDate, selectedCity, productsFilePath, eventsFilePath);
+
+                // Afisare raport
+                report.displayReport();
+
+                // Salvare raport in fisier
+                report.saveReportToCSV(reportsFilePath);
+            }
+            else if (mainChoice == 6)
             {
                 break;
             }
