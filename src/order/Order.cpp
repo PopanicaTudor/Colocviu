@@ -1,4 +1,5 @@
 #include "Order.h"
+#include "../inventory/Product.h"
 #include <filesystem>
 #include <fstream>
 #include <sstream>

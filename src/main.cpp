@@ -1,11 +1,15 @@
 #include <iostream>
-#include "utils/CSVParser.h"
+#include "util/CSVParser.h"
 #include "employee/Employee.h"
 #include "employee/Manager.h"
 #include "employee/Barista.h"
 #include "employee/Waiter.h"
 #include "inventory/Product.h"
 #include "order/Order.h"
+#include "event/Event.h"
+#include "event/MovieNight.h"
+#include "event/Workshop.h"
+#include "event/CoffeeTasting.h"
 #include <memory>
 #include <vector>
 #include <string>
@@ -61,6 +65,7 @@ int main()
         // Actualizare calea fisierelor pentru orasul selectat
         std::string employeesFilePath = "../data/employees/" + selectedCity + ".csv";
         std::string productsFilePath = "../data/products/" + selectedCity + ".csv";
+        std::string eventsFilePath = "../data/events/" + selectedCity + ".csv";
 
         // Check if the employees file is empty and add header if necessary
         std::ifstream infile(employeesFilePath);
@@ -146,7 +151,8 @@ int main()
             std::cout << "1. Gestionare angajati\n";
             std::cout << "2. Gestionare produse\n";
             std::cout << "3. Simulare comanda\n";
-            std::cout << "4. Inapoi la selectare oras\n";
+            std::cout << "4. Organizare eveniment\n";
+            std::cout << "5. Inapoi la selectare oras\n";
             std::cout << "Optiune: ";
 
             int mainChoice;
@@ -647,6 +653,79 @@ int main()
                 Product::updateProductCSV(productPtrs, productsFilePath);
             }
             else if (mainChoice == 4)
+            {
+                std::cout << "\n\tOrganizare eveniment pentru " << selectedCity << ":\n";
+
+                std::string eventName;
+                std::string eventDate;
+                double eventCost;
+
+                std::cout << "\n\tSelectati tipul de eveniment:\n";
+                std::cout << "1. Degustare de cafea\n";
+                std::cout << "2. Atelier\n";
+                std::cout << "3. Seara de film\n";
+                std::cout << "Optiune: ";
+
+                int eventChoice;
+                std::cin >> eventChoice;
+
+                if (eventChoice == 1)
+                {
+                    std::vector<std::string> coffeeTypes;
+                    int noOfTypes;
+
+                    std::cout << "Numar tipuri de cafea: ";
+                    std::cin >> noOfTypes;
+
+                    for (int i = 0; i < noOfTypes; i++)
+                    {
+                        std::string type;
+                        std::cout << "Tip cafea: ";
+                        std::cin >> type;
+                        coffeeTypes.push_back(type);
+                    }
+
+                    std::unique_ptr<Event> coffeeTasting = std::make_unique<CoffeeTasting>(eventName, eventDate, eventCost, coffeeTypes);
+                    coffeeTasting->displayDetails();
+                    coffeeTasting->performEventAction();
+                }
+                else if (eventChoice == 2)
+                {
+                    std::string topic;
+                    int participantLimit;
+
+                    std::cout << "Subiect: ";
+                    std::cin >> topic;
+                    std::cout << "Numar maxim participanti: ";
+                    std::cin >> participantLimit;
+
+                    std::unique_ptr<Event> workshop = std::make_unique<Workshop>(eventName, eventDate, eventCost, topic, participantLimit);
+                    workshop->displayDetails();
+                    workshop->performEventAction();
+                }
+                else if (eventChoice == 3)
+                {
+                    std::string movieTitle;
+                    std::string startTime;
+
+                    std::cout << "Titlu film: ";
+                    std::cin >> movieTitle;
+                    std::cout << "Ora incepere: ";
+                    std::cin >> startTime;
+
+                    std::unique_ptr<Event> movieNight = std::make_unique<MovieNight>(eventName, eventDate, eventCost, movieTitle, startTime);
+                    movieNight->displayDetails();
+                    movieNight->performEventAction();
+                }
+
+                std::cout << "Nume eveniment: ";
+                std::cin >> eventName;
+                std::cout << "Data eveniment (ZZ/LL/AAAA): ";
+                std::cin >> eventDate;
+                std::cout << "Cost eveniment: ";
+                std::cin >> eventCost;
+            }
+            else if (mainChoice == 5)
             {
                 break;
             }
