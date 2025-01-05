@@ -211,15 +211,13 @@ void Report::saveReportToCSV(const std::string& reportFilePath)
     double totalIncome = calculateTotalIncome(date, city, ordersFilePath);
     double profit = calculateProfit(date, city, employeesFilePath, ordersFilePath, eventsFilePath);
 
-    std::ofstream file(reportFilePath);
-
+    std::ofstream file(reportFilePath, std::ios_base::app);
     if (!file.is_open())
     {
         std::cerr << "Eroare la deschiderea fisierului: " << reportFilePath << "\n";
         return;
     }
 
-    file << "Date,EmployeeCost,OrderCost,EventCost,TotalCost,TotalIncome,Profit\n";
     file << date << "," << totalEmployeeCost << ","<< totalOrderCost << "," << totalEventCost << "," << totalCost << "," << totalIncome << "," << profit << "\n";
 
     file.close();
