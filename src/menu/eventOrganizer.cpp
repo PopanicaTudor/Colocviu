@@ -21,6 +21,8 @@ void eventOrganizer(std::string selectedCity)
     std::string eventName;
     std::string eventDate;
     double eventCost;
+    struct tm eventTm = {};
+    bool isValidDate = false;
 
     std::vector<std::string> coffeeTypes;
     std::string topic;
@@ -30,21 +32,29 @@ void eventOrganizer(std::string selectedCity)
 
     int eventChoice = eventMenu(selectedCity);
 
-    // Selectați tipul de eveniment
-    if (eventChoice == 1)
+    try
     {
-        eventChoice1(coffeeTypes);
+        // Selectați tipul de eveniment
+        if (eventChoice == 1)
+        {
+            eventChoice1(coffeeTypes);
+        }
+        else if (eventChoice == 2)
+        {
+            eventChoice2(topic, participantLimit);
+        }
+        else if (eventChoice == 3)
+        {
+            eventChoice3(movieTitle, startTime);
+        }
+        else
+        {
+            throw std::invalid_argument("Alegere eveniment invalidă!");
+        }
     }
-    else if (eventChoice == 2)
+    catch (const std::exception &e)
     {
-        eventChoice2(topic, participantLimit);
-    }
-    else if (eventChoice == 3)
-    {
-        eventChoice3(movieTitle, startTime);
-    }
-    else
-    {
+        std::cerr << "A aparut o eroare la selectarea tipului de eveniment: " << e.what() << "\n";
         return;
     }
 
@@ -52,30 +62,35 @@ void eventOrganizer(std::string selectedCity)
     std::cout << "Nume eveniment: ";
     std::cin.ignore(); // Clear the newline character left in the buffer
     std::getline(std::cin, eventName);
+    if (eventName.empty())
+    {
+        throw std::invalid_argument("Numele evenimentului nu poate fi gol!");
+    }
 
-    // Verificare dată eveniment
-    time_t now = time(0);
-    tm *ltm = localtime(&now);
-
-    time_t eventTime;
+    // Citire data eveniment
     do
     {
-        // Citire dată eveniment
         std::cout << "Data eveniment (ZZ/LL/AAAA): ";
         std::cin >> eventDate;
 
-        struct tm eventTm = {};
-        std::istringstream ss(eventDate);
-        if (!(ss >> std::get_time(&eventTm, "%d/%m/%Y")))
+        std::stringstream ss(eventDate);
+        if (ss >> std::get_time(&eventTm, "%d/%m/%Y"))
+        {
+            isValidDate = true;
+        }
+        else
         {
             std::cout << "Format invalid. Introduceti o data valida!\n";
-            continue;
         }
-    } while (difftime(eventTime, now) < 0);
+    } while (!isValidDate);
 
     // Citire cost eveniment
     std::cout << "Cost eveniment: ";
     std::cin >> eventCost;
+    if (eventCost < 0)
+    {
+        throw std::invalid_argument("Costul evenimentului nu poate fi negativ!");
+    }
 
     // Creare obiect eveniment
     if (eventChoice == 1)
@@ -92,14 +107,5 @@ void eventOrganizer(std::string selectedCity)
     {
         event = std::make_unique<MovieNight>(eventName, eventDate, eventCost, movieTitle, startTime, selectedCity);
         event->displayDetails();
-    }
-
-    // Creare currentDate dupa formatul DD/MM/YYYY
-    std::string currentDate = std::to_string(ltm->tm_mday) + "/" + std::to_string(1 + ltm->tm_mon) + "/" + std::to_string(1900 + ltm->tm_year);
-
-    // Efectuează acțiunea evenimentului dacă este este acceași zi
-    if (eventDate == currentDate)
-    {
-        event->performEventAction();
     }
 }

@@ -7,6 +7,9 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+#include <sstream>
+#include <ctime>
+#include <iomanip>
 
 void orderSimulation(std::string selectedCity, std::string productsFilePath, std::vector<std::unique_ptr<Product>> &products)
 {
@@ -17,16 +20,40 @@ void orderSimulation(std::string selectedCity, std::string productsFilePath, std
     std::vector<Product> orderProducts;
     std::string orderDate;
 
+    struct tm orderTm = {};
+    bool isValidDate = false;
+
     // Citim numele clientului
     std::cout << "Prenume client: ";
     std::cin >> clientFirstName;
+    if (clientFirstName.empty())
+    {
+        throw std::runtime_error("Prenumele clientului nu poate fi gol!");
+    }
 
     std::cout << "Nume client: ";
     std::cin >> clientLastName;
+    if (clientLastName.empty())
+    {
+        throw std::runtime_error("Numele clientului nu poate fi gol!");
+    }
 
     // Citim data comenzii
-    std::cout << "Data comenzii (ZZ/LL/AAAA): ";
-    std::cin >> orderDate;
+    do
+    {
+        std::cout << "Data comanda (ZZ/LL/AAAA): ";
+        std::cin >> orderDate;
+
+        std::istringstream ss(orderDate);
+        if (ss >> std::get_time(&orderTm, "%d/%m/%Y"))
+        {
+            isValidDate = true;
+        }
+        else
+        {
+            std::cout << "Format invalid. Introduceti o data valida!\n";
+        }
+    } while (!isValidDate);
 
     // Adăugăm produse în comandă
     while (true)
@@ -47,6 +74,11 @@ void orderSimulation(std::string selectedCity, std::string productsFilePath, std
             std::cout << "Cantitate: ";
             std::cin >> quantity;
 
+            if (quantity <= 0)
+            {
+                throw std::runtime_error("Cantitatea trebuie sa fie un numar pozitiv!");
+            }
+
             if ((*it)->getStock() >= quantity)
             {
                 // Adăugăm produsul comandat
@@ -56,12 +88,12 @@ void orderSimulation(std::string selectedCity, std::string productsFilePath, std
             }
             else
             {
-                std::cout << "Stoc insuficient!\n";
+                throw std::runtime_error("Stoc insuficient pentru produsul: " + productName);
             }
         }
         else
         {
-            std::cout << "Produsul nu a fost gasit.\n";
+            throw std::runtime_error("Produsul " + productName + " nu a fost gasit.");
         }
 
         // Continuăm sau ieșim

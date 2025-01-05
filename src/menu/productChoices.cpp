@@ -13,10 +13,27 @@ void productChoice1(std::string productsFilePath, std::vector<std::unique_ptr<Pr
     int stock;
     std::cout << "Nume produs: ";
     std::cin >> name;
+    std::cin.ignore();
+    std::getline(std::cin, name);
+
+    if (name.empty())
+    {
+        throw std::invalid_argument("Numele produsului nu poate fi gol.");
+    }
+
     std::cout << "Pret produs: ";
     std::cin >> price;
+    if (price <= 0)
+    {
+        throw std::invalid_argument("Pretul produsului trebuie sa fie mai mare decat zero.");
+    }
+
     std::cout << "Stoc produs: ";
     std::cin >> stock;
+    if (stock < 0)
+    {
+        throw std::invalid_argument("Stocul produsului nu poate fi negativ.");
+    }
 
     auto newProduct = std::make_unique<Product>(name, price, stock);
     products.push_back(std::move(newProduct));
@@ -29,7 +46,13 @@ void productChoice2(std::string productsFilePath, std::vector<std::unique_ptr<Pr
 {
     std::string name;
     std::cout << "Nume produs: ";
-    std::cin >> name;
+    std::cin.ignore();
+    std::getline(std::cin, name);
+
+    if (name.empty())
+    {
+        throw std::invalid_argument("Numele produsului nu poate fi gol.");
+    }
 
     auto it = std::remove_if(products.begin(), products.end(),
                              [&name](const std::unique_ptr<Product> &product)
@@ -44,7 +67,7 @@ void productChoice2(std::string productsFilePath, std::vector<std::unique_ptr<Pr
     }
     else
     {
-        std::cout << "Produsul nu a fost gasit.\n";
+        throw std::runtime_error("Produsul nu a fost gasit.");
     }
 
     // Actualizează fișierul CSV
@@ -60,7 +83,13 @@ void productChoice3(std::string productsFilePath, std::vector<std::unique_ptr<Pr
 {
     std::string name;
     std::cout << "Nume produs: ";
-    std::cin >> name;
+    std::cin.ignore();
+    std::getline(std::cin, name);
+
+    if (name.empty())
+    {
+        throw std::invalid_argument("Numele produsului nu poate fi gol.");
+    }
 
     auto it = std::find_if(products.begin(), products.end(),
                            [&name](const std::unique_ptr<Product> &product)
@@ -81,6 +110,10 @@ void productChoice3(std::string productsFilePath, std::vector<std::unique_ptr<Pr
             double newPrice;
             std::cout << "Pret nou: ";
             std::cin >> newPrice;
+            if (newPrice <= 0)
+            {
+                throw std::invalid_argument("Pretul nou trebuie sa fie mai mare decat zero.");
+            }
             (*it)->setPrice(newPrice);
         }
 
@@ -92,6 +125,10 @@ void productChoice3(std::string productsFilePath, std::vector<std::unique_ptr<Pr
             int newStock;
             std::cout << "Stoc nou: ";
             std::cin >> newStock;
+            if (newStock < 0)
+            {
+                throw std::invalid_argument("Stocul nou nu poate fi negativ.");
+            }
             (*it)->setStock(newStock);
         }
 
@@ -117,10 +154,29 @@ void productChoice3(std::string productsFilePath, std::vector<std::unique_ptr<Pr
             int stock;
             std::cout << "Nume produs: ";
             std::cin >> name;
+            std::cin.ignore();
+            std::getline(std::cin, name);
+
+            if (name.empty())
+            {
+                throw std::invalid_argument("Numele produsului nu poate fi gol.");
+            }
+
             std::cout << "Pret produs: ";
             std::cin >> price;
+
+            if (price <= 0)
+            {
+                throw std::invalid_argument("Pretul produsului trebuie sa fie mai mare decat zero.");
+            }
+
             std::cout << "Stoc produs: ";
             std::cin >> stock;
+
+            if (stock < 0)
+            {
+                throw std::invalid_argument("Stocul produsului nu poate fi negativ.");
+            }
 
             auto newProduct = std::make_unique<Product>(name, price, stock);
             products.push_back(std::move(newProduct));
@@ -135,7 +191,7 @@ void productChoice4(std::string selectedCity, std::vector<std::unique_ptr<Produc
 {
     if (products.empty())
     {
-        std::cout << "Nu exista produse in " << selectedCity << ".\n";
+        throw std::runtime_error("Nu exista produse in " + selectedCity + ".");
     }
     else
     {

@@ -19,10 +19,50 @@ void employeeChoice1(std::string employeesFilePath, std::vector<std::unique_ptr<
     std::cin >> lastName;
     std::cout << "Job (Manager, Barista, Waiter): ";
     std::cin >> role;
-    std::cout << "Ora incepere program: ";
+
+    std::cout << "Ora incepere program (HH:MM): ";
     std::cin >> startHour;
-    std::cout << "Ora sfarsit program: ";
+
+    // Verificare format ora
+    if (startHour.size() != 5 || startHour[2] != ':' ||
+        !isdigit(startHour[0]) || !isdigit(startHour[1]) ||
+        !isdigit(startHour[3]) || !isdigit(startHour[4]))
+    {
+        throw std::invalid_argument("Formatul orei este invalid. Utilizati HH:MM.");
+    }
+
+    int startHourInt = std::stoi(startHour.substr(0, 2));
+    if (startHourInt < 0 || startHourInt > 24)
+    {
+        throw std::invalid_argument("Ora de inceput trebuie sa fie intre 00 si 24.");
+    }
+
+    std::cout << "Ora sfarsit program (HH:MM): ";
     std::cin >> endHour;
+
+    // Verificare format ora
+    if (endHour.size() != 5 || endHour[2] != ':' ||
+        !isdigit(endHour[0]) || !isdigit(endHour[1]) ||
+        !isdigit(endHour[3]) || !isdigit(endHour[4]))
+    {
+        throw std::invalid_argument("Formatul orei este invalid. Utilizati HH:MM.");
+    }
+
+    int endHourInt = std::stoi(endHour.substr(0, 2));
+    if (endHourInt < 0 || endHourInt > 24)
+    {
+        throw std::invalid_argument("Ora de sfarsit trebuie sa fie intre 00 si 24.");
+    }
+
+    if (endHourInt <= startHourInt)
+    {
+        throw std::invalid_argument("Ora de sfarsit trebuie sa fie strict mai mare decat ora de inceput.");
+    }
+
+    if (firstName.empty() || lastName.empty() || role.empty() || startHour.empty() || endHour.empty())
+    {
+        throw std::invalid_argument("Toate campurile trebuie completate.");
+    }
 
     std::unique_ptr<Employee> newEmployee;
 
@@ -40,14 +80,21 @@ void employeeChoice1(std::string employeesFilePath, std::vector<std::unique_ptr<
     }
     else
     {
-        std::cerr << "Rol necunoscut. Angajatul nu a fost adaugat.\n";
+        throw std::invalid_argument("Rol necunoscut. Angajatul nu a fost adaugat.");
     }
 
     // Adaugă angajatul în vector
     employees.push_back(std::move(newEmployee));
 
     // Adaugă angajatul în CSV
-    Employee::addEmployeeToCSV(*employees.back(), employeesFilePath);
+    try
+    {
+        Employee::addEmployeeToCSV(*employees.back(), employeesFilePath);
+    }
+    catch (const std::exception &e)
+    {
+        throw std::runtime_error("Eroare la adaugarea angajatului in CSV: " + std::string(e.what()));
+    }
 
     std::cout << "Angajat adaugat cu succes!\n";
 }
@@ -74,11 +121,18 @@ void employeeChoice2(std::string employeesFilePath, std::vector<std::unique_ptr<
     }
     else
     {
-        std::cout << "Angajatul nu a fost gasit.\n";
+        throw std::runtime_error("Angajatul nu a fost gasit.");
     }
 
     // Actualizează fișierul CSV
-    Employee::updateEmployeeCSV(employees, employeesFilePath);
+    try
+    {
+        Employee::updateEmployeeCSV(employees, employeesFilePath);
+    }
+    catch (const std::exception &e)
+    {
+        throw std::runtime_error("Eroare la actualizarea fisierului CSV: " + std::string(e.what()));
+    }
 }
 
 void employeeChoice3(std::string employeesFilePath, std::vector<std::unique_ptr<Employee>> &employees)
@@ -127,7 +181,7 @@ void employeeChoice3(std::string employeesFilePath, std::vector<std::unique_ptr<
             }
             else
             {
-                std::cerr << "Rol necunoscut. Modificarea a fost anulata.\n";
+                throw std::invalid_argument("Rol necunoscut. Modificarea a fost anulata.");
             }
 
             // Înlocuiește obiectul vechi cu cel nou
@@ -143,6 +197,21 @@ void employeeChoice3(std::string employeesFilePath, std::vector<std::unique_ptr<
             std::string newStartHour;
             std::cout << "Ora incepere noua: ";
             std::cin >> newStartHour;
+
+            // Verificare format ora
+            if (newStartHour.size() != 5 || newStartHour[2] != ':' ||
+                !isdigit(newStartHour[0]) || !isdigit(newStartHour[1]) ||
+                !isdigit(newStartHour[3]) || !isdigit(newStartHour[4]))
+            {
+                throw std::invalid_argument("Formatul orei este invalid. Utilizati HH:MM.");
+            }
+
+            int newStartHourInt = std::stoi(newStartHour.substr(0, 2));
+            if (newStartHourInt < 0 || newStartHourInt > 24)
+            {
+                throw std::invalid_argument("Ora de inceput trebuie sa fie intre 00 si 24.");
+            }
+
             (*it)->setStartHour(newStartHour);
         }
 
@@ -154,16 +223,43 @@ void employeeChoice3(std::string employeesFilePath, std::vector<std::unique_ptr<
             std::string newEndHour;
             std::cout << "Ora sfarsit noua: ";
             std::cin >> newEndHour;
+
+            // Verificare format ora
+            if (newEndHour.size() != 5 || newEndHour[2] != ':' ||
+                !isdigit(newEndHour[0]) || !isdigit(newEndHour[1]) ||
+                !isdigit(newEndHour[3]) || !isdigit(newEndHour[4]))
+            {
+                throw std::invalid_argument("Formatul orei este invalid. Utilizati HH:MM.");
+            }
+
+            int newEndHourInt = std::stoi(newEndHour.substr(0, 2));
+            if (newEndHourInt < 0 || newEndHourInt > 24)
+            {
+                throw std::invalid_argument("Ora de sfarsit trebuie sa fie intre 00 si 24.");
+            }
+
+            if (newEndHourInt <= std::stoi((*it)->getStartHour().substr(0, 2)))
+            {
+                throw std::invalid_argument("Ora de sfarsit trebuie sa fie strict mai mare decat ora de inceput.");
+            }
+
             (*it)->setEndHour(newEndHour);
         }
 
         // Actualizează fișierul CSV
-        Employee::updateEmployeeCSV(employees, employeesFilePath);
+        try
+        {
+            Employee::updateEmployeeCSV(employees, employeesFilePath);
+        }
+        catch (const std::exception &e)
+        {
+            throw std::runtime_error("Eroare la actualizarea fisierului CSV: " + std::string(e.what()));
+        }
     }
     else
     {
         // Angajatul nu există
-        std::cout << "Angajatul nu a fost gasit.\n";
+        throw std::runtime_error("Angajatul nu a fost gasit.");
     }
 }
 
