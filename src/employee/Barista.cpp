@@ -10,3 +10,8 @@ void Barista::displayInfo() const
     std::cout << "[Barista] ";
     Employee::displayInfo();
 }
+
+double Barista::calculateDailySalary() const
+{
+    return calculateWorkedHours(startHour, endHour) * hourlyRate;
+}

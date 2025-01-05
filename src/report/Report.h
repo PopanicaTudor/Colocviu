@@ -10,13 +10,17 @@ class Report
 private:
     std::string date;
     std::string city;
+    std::string employeesFilePath;
     std::string ordersFilePath;
     std::string eventsFilePath;
     const double profitMargin = 0.2; // 20% profit din venituri
 
 public:
     // Constructor
-    Report(const std::string& date, const std::string& city, const std::string& ordersFilePath, const std::string& eventsFilePath);
+    Report(const std::string& date, const std::string& city, const std::string& employeesFilePath, const std::string& ordersFilePath, const std::string& eventsFilePath);
+
+    // Metoda pentru calcularea costurilor din salariile angajatilor
+    double calculateEmployeeCosts(const std::string& city, const std::string& employeesFilePath);
 
     // Metoda pentru calcularea costurilor din comenzi pe baza unei date
     double calculateOrderCosts(const std::string& date, const std::string& city, const std::string& ordersFilePath);
@@ -25,13 +29,13 @@ public:
     double calculateEventCosts(const std::string& date, const std::string& city, const std::string& eventsFilePath);
 
     // Metoda pentru calcularea costurilor totale pe baza unei date
-    double calculateTotalCosts(const std::string& date, const std::string& city, const std::string& ordersFilePath, const std::string& eventsFilePath);
+    double calculateTotalCosts(const std::string& date, const std::string& city, const std::string& employeesFilePath, const std::string& ordersFilePath, const std::string& eventsFilePath);
 
     // Metoda pentru calcularea veniturilor totale pe baza unei date
-    double calculateTotalIncome(const std::string& date, const std::string& city, const std::string& ordersFilePath, const std::string& eventsFilePath);
+    double calculateTotalIncome(const std::string& date, const std::string& city, const std::string& ordersFilePath);
 
     // Metoda pentru calcularea profitului pe baza unei date
-    double calculateProfit(const std::string& date, const std::string& city, const std::string& ordersFilePath, const std::string& eventsFilePath);
+    double calculateProfit(const std::string& date, const std::string& city, const std::string& employeesFilePath, const std::string& ordersFilePath, const std::string& eventsFilePath);
 
     // Metoda pentru afisarea raportului
     void displayReport();

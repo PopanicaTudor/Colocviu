@@ -805,7 +805,7 @@ int main()
                 std::cin >> reportDate;
 
                 // Creare obiect raport
-                Report report(reportDate, selectedCity, productsFilePath, eventsFilePath);
+                Report report(reportDate, selectedCity, employeesFilePath, productsFilePath, eventsFilePath);
 
                 // Afisare raport
                 report.displayReport();

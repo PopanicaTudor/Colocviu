@@ -10,3 +10,8 @@ void Manager::displayInfo() const
     std::cout << "[Manager] ";
     Employee::displayInfo();
 }
+
+double Manager::calculateDailySalary() const
+{
+    return calculateWorkedHours(startHour, endHour) * hourlyRate;
+}

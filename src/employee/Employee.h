@@ -35,6 +35,10 @@ public:
     static void addEmployeeToCSV(const Employee &employee, const std::string &filePath);
     static void updateEmployeeCSV(const std::vector<std::unique_ptr<Employee>> &employees, const std::string &filePath);
     static std::vector<std::unique_ptr<Employee>> readEmployeesFromCSV(const std::string &filePath);
+
+    static int extractHour(const std::string &time);
+    static int calculateWorkedHours(const std::string &startHour, const std::string &endHour);
+    virtual double calculateDailySalary() const = 0;
 };
 
 #endif

@@ -158,3 +158,20 @@ std::vector<std::unique_ptr<Employee>> Employee::readEmployeesFromCSV(const std:
     file.close();
     return employees;
 }
+
+int Employee::extractHour(const std::string &time)
+{
+    std::istringstream ss(time);
+    std::string hour;
+    std::getline(ss, hour, ':');
+
+    return std::stoi(hour);
+}
+
+int Employee::calculateWorkedHours(const std::string &startHour, const std::string &endHour)
+{
+    int start = extractHour(startHour);
+    int end = extractHour(endHour);
+    
+    return end - start;
+}

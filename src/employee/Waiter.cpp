@@ -10,3 +10,8 @@ void Waiter::displayInfo() const
     std::cout << "[Ospatar] ";
     Employee::displayInfo();
 }
+
+double Waiter::calculateDailySalary() const
+{
+    return calculateWorkedHours(startHour, endHour) * hourlyRate;
+}
