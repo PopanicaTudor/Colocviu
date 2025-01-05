@@ -1,2 +1,2 @@
-Date,OrderCost,EventCost,TotalCost,TotalIncome,Profit
-05/01/2025,44,0,35.2,44,8.8
+Date,EmployeeCost,OrderCost,EventCost,TotalCost,TotalIncome,Profit
+05/01/2025,500,162.4,100,762.4,162.4,-600

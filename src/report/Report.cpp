@@ -29,13 +29,13 @@ double Report::calculateEmployeeCosts(const std::string& city, const std::string
     }
 
     // Citim datele din fișier
-    std::string line, role, firstName, lastName, startHour, endHour;
+    std::string line, firstName, lastName, role, startHour, endHour;
     while (std::getline(file, line))
     {
         std::istringstream ss(line);
-        std::getline(ss, role, ',');
         std::getline(ss, firstName, ',');
         std::getline(ss, lastName, ',');
+        std::getline(ss, role, ',');
         std::getline(ss, startHour, ',');
         std::getline(ss, endHour, ',');
 
@@ -115,7 +115,7 @@ double Report::calculateOrderCosts(const std::string& date, const std::string& c
         }
     }
 
-    return totalOrderCost;
+    return totalOrderCost * (1 - profitMargin);
 }
 
 // Calcularea costurilor din evenimente pe baza unei date
@@ -162,7 +162,7 @@ double Report::calculateTotalCosts(const std::string& date, const std::string& c
     double totalOrderCost = calculateOrderCosts(date, city, ordersFilePath);
     double totalEventCost = calculateEventCosts(date, city, eventsFilePath);
 
-    return totalEmployeeCost + totalOrderCost * (1 - profitMargin) + totalEventCost;
+    return totalEmployeeCost + totalOrderCost + totalEventCost;
 }
 
 // Calcularea veniturilor

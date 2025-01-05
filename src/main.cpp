@@ -757,13 +757,6 @@ int main()
                         std::cout << "Format invalid. Introduceti o data valida!\n";
                         continue;
                     }
-
-                    eventTime = mktime(&eventTm);
-
-                    if (difftime(eventTime, now) < 0)
-                    {
-                        std::cout << "Data evenimentului nu poate fi in trecut. Introduceti o data valida!\n";
-                    }
                 } while (difftime(eventTime, now) < 0);
 
                 // Citire cost eveniment
