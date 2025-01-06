@@ -10,6 +10,7 @@
 #include <map>
 #include <string>
 
+// Funcție pentru a stoca angajații din fișierul CSV
 std::vector<std::unique_ptr<Employee>> storeEmployees(std::string employeesFilePath)
 {
     // Citește angajații din fișierul CSV

@@ -5,6 +5,7 @@ Manager::Manager(const std::string &firstName, const std::string &lastName, cons
 
 Manager::~Manager() {}
 
+// Afiseaza informatiile despre manager, rescriind metoda din clasa de baza
 void Manager::displayInfo() const
 {
     std::cout << "[Manager] ";

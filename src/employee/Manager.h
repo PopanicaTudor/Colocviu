@@ -3,6 +3,7 @@
 
 #include "Employee.h"
 
+/// Clasa Manager, derivată din clasa Employee; Concept de moștenire
 class Manager : public Employee
 {
 private:
@@ -10,10 +11,10 @@ private:
 
 public:
     Manager(const std::string &firstName, const std::string &lastName, const std::string &startHour, const std::string &endHour);
-    ~Manager() override;
+    ~Manager() override; // Override pentru destructorul clasei de bază
 
-    void displayInfo() const override;
-    double calculateDailySalary() const override;
+    void displayInfo() const override; // Override pentru metoda virtuală din clasa de bază
+    double calculateDailySalary() const override; // Override pentru metoda virtuală pură din clasa de bază
 };
 
 #endif

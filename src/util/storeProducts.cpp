@@ -7,13 +7,14 @@
 #include <map>
 #include <string>
 
+// Funcție pentru a stoca produsele din fișierul CSV
 std::vector<std::unique_ptr<Product>> storeProducts(std::string productsFilePath)
 {
-    // Read products from the CSV file
+    // Citirea produselor din fișierul CSV
     CSVParser parser(productsFilePath);
     std::vector<std::map<std::string, std::string>> productData = parser.readCSV();
 
-    // Store products
+    // Popularea vectorului de produse
     std::vector<std::unique_ptr<Product>> products;
     for (const auto &row : productData)
     {

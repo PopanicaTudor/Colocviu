@@ -1,3 +1,4 @@
+/// Includerea fișierelor header
 #include "util/selectCity.h"
 #include "util/storeEmployees.h"
 #include "util/storeProducts.h"
@@ -9,15 +10,18 @@
 #include "menu/eventChoices.h"
 #include "menu/reportGenerator.h"
 
+/// Includerea bibliotecilor necesare
 #include <iostream>
 #include <fstream>
 #include <memory>
 
+/// Funcția principală
 int main()
 {
     /// Selectarea orașului
     std::string selectedCity;
 
+    // Folosire block-uri try-throw-catch pentru a trata excepțiile care pot apărea în timpul rulării programului; Concept de exceptions
     try
     {
 

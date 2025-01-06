@@ -1,7 +1,9 @@
 #include "selectCity.h"
+
 #include <iostream>
 #include <string>
 
+// Selectează orașul pentru gestionare
 std::string selectCity()
 {
     while (true)

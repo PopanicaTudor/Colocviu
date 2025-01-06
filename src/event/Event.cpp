@@ -1,4 +1,5 @@
 #include "Event.h"
+
 #include <fstream>
 
 // Constructor
@@ -50,7 +51,7 @@ void Event::setCity(const std::string &city)
     this->city = city;
 }
 
-// Display event details
+// Afișarea detaliilor evenimentului
 void Event::displayDetails() const
 {
     std::cout << "Eveniment: " << name << "\nData: " << date << "\nCost: " << cost << " RON\n";

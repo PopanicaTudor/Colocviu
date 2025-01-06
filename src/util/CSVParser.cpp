@@ -1,4 +1,5 @@
 #include "CSVParser.h"
+
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -6,6 +7,7 @@
 
 CSVParser::CSVParser(const std::string &filename) : filename(filename) {}
 
+// Metodă pentru citirea datelor din fișierul CSV
 std::vector<std::map<std::string, std::string>> CSVParser::readCSV()
 {
     std::vector<std::map<std::string, std::string>> data;
@@ -20,7 +22,7 @@ std::vector<std::map<std::string, std::string>> CSVParser::readCSV()
     std::string line;
     std::vector<std::string> headers;
 
-    // Read headers
+    // Citim antetul
     if (std::getline(file, line))
     {
         std::stringstream headerStream(line);
@@ -32,7 +34,7 @@ std::vector<std::map<std::string, std::string>> CSVParser::readCSV()
         }
     }
 
-    // Read data
+    // Citim fiecare linie de date
     while (std::getline(file, line))
     {
         std::stringstream lineStream(line);

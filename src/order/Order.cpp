@@ -1,5 +1,6 @@
 #include "Order.h"
 #include "../inventory/Product.h"
+
 #include <filesystem>
 #include <fstream>
 #include <sstream>
@@ -10,7 +11,7 @@
 
 namespace fs = std::filesystem;
 
-// Constructor implementation
+// Constructor
 Order::Order(const std::string &customerFirstName, const std::string &customerLastName, const std::vector<Product> &products,
              const std::string &filePath, const std::string &date, const std::string &city)
     : customerFirstName(customerFirstName), customerLastName(customerLastName), products(products), totalCost(0), date(date), city(city)
@@ -18,7 +19,7 @@ Order::Order(const std::string &customerFirstName, const std::string &customerLa
     calculateTotalCost();
     updateProductStock(filePath);
 
-    // Check if the client is loyal
+    // Verifică dacă clientul este fidel
     std::vector<Order> orderHistory = loadOrdersFromCSV(city);
 
     if (isLoyalCustomer(orderHistory))
@@ -27,18 +28,18 @@ Order::Order(const std::string &customerFirstName, const std::string &customerLa
         applyDiscount(0.25); // 25% discount
     }
 
-    // Save order to CSV
+    // Salvează comanda în fișier
     saveOrderToCSV(city);
 }
 
-// Constructor for loading orders from CSV
+// Constructor pentru încărcarea comenzilor din CSV
 Order::Order(const std::string &customerFirstName, const std::string &customerLastName, const std::vector<Product> &products, const std::string &date)
     : customerFirstName(customerFirstName), customerLastName(customerLastName), products(products), totalCost(0), date(date)
 {
     calculateTotalCost();
 }
 
-// Private method to calculate the total cost
+// Calcularea costului total al comenzii
 void Order::calculateTotalCost()
 {
     totalCost = 0;
@@ -48,8 +49,7 @@ void Order::calculateTotalCost()
     }
 }
 
-// Helper function to convert date strings to time_t
-// Assumes format is DD/MM/YYYY
+// Funcție pentru conversia datei în format string (ZZ/LL/AAAA)
 time_t Order::stringToDate(const std::string& date) const
 {
     struct tm tm = {};
@@ -61,7 +61,7 @@ time_t Order::stringToDate(const std::string& date) const
     return mktime(&tm);
 }
 
-// Private method to update product stock in the CSV file
+// Actualizează stocul produselor în fișierul CSV
 void Order::updateProductStock(const std::string &filePath)
 {
     std::vector<Product> allProducts = Product::loadProductsFromCSV(filePath);
@@ -133,7 +133,7 @@ double Order::calculateProfit() const
     return totalCost * profitMargin;
 }
 
-// Print order details
+// Afișarea detaliilor comenzii
 void Order::printOrderDetails() const
 {
     std::cout << "Prenume client: " << customerFirstName << std::endl;
@@ -147,7 +147,7 @@ void Order::printOrderDetails() const
     std::cout << "Profit: " << std::fixed << std::setprecision(2) << calculateProfit() << " RON" << std::endl;
 }
 
-// Method to save order to a CSV file
+// Salvarea comenzii într-un fișier CSV
 void Order::saveOrderToCSV(const std::string &city) const
 {
     std::string directoryPath = "../data/orders/" + city;
@@ -163,7 +163,7 @@ void Order::saveOrderToCSV(const std::string &city) const
         return;
     }
 
-    // Write client details
+    // Detaliile comenzii
     outFile << "Customer First Name," << customerFirstName << "\n";
     outFile << "Customer Last Name," << customerLastName << "\n";
     outFile << "Total Cost," << totalCost << "\n";
@@ -171,7 +171,7 @@ void Order::saveOrderToCSV(const std::string &city) const
     outFile << "Date," << date << "\n";
     outFile << "Loyality Discount," << (isLoyalCustomer(loadOrdersFromCSV(city)) ? "Yes" : "No") << "\n";
 
-    // Write product details
+    // Produsele comandate
     outFile << "Product,Price,Quantity\n";
     for (const auto &product : products)
     {
@@ -182,6 +182,7 @@ void Order::saveOrderToCSV(const std::string &city) const
     std::cout << "Comanda a fost salvata in: " << filePath << std::endl;
 }
 
+// Funcție pentru a încărca comenzile din fișierul CSV
 std::vector<Order> Order::loadOrdersFromCSV(const std::string &city)
 {
     std::vector<Order> orders;
@@ -242,6 +243,7 @@ std::vector<Order> Order::loadOrdersFromCSV(const std::string &city)
     return orders;
 }
 
+// Verifică dacă clientul este fidel
 bool Order::isLoyalCustomer(const std::vector<Order>& orderHistory) const
 {
     time_t now = time(0);
@@ -267,6 +269,7 @@ bool Order::isLoyalCustomer(const std::vector<Order>& orderHistory) const
     return false;
 }
 
+// Aplică discountul comenzii
 void Order::applyDiscount(double discountRate)
 {
     totalCost *= (1 - discountRate);

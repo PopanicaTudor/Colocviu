@@ -3,6 +3,7 @@
 #include "../employee/Manager.h"
 #include "../employee/Barista.h"
 #include "../employee/Waiter.h"
+
 #include <numeric>
 #include <algorithm>
 #include <fstream>
@@ -15,7 +16,7 @@ Report::Report(const std::string& date, const std::string& city, const std::stri
     : date(date), city(city), employeesFilePath(employeesFilePath), ordersFilePath(ordersFilePath), eventsFilePath(eventsFilePath) {}
 
 
-// Calcularea costurilor din salariile angajatilor
+// Calcularea costurilor din salariile angajaților
 double Report::calculateEmployeeCosts(const std::string& city, const std::string& employeesFilePath)
 {
     double totalEmployeeCost = 0;
@@ -201,7 +202,7 @@ void Report::displayReport()
     std::cout << "Profit: " << profit << "\n";
 }
 
-// Salvarea raportului in fisier
+// Salvarea raportului in fișier
 void Report::saveReportToCSV(const std::string& reportFilePath)
 {
     double totalEmployeeCost = calculateEmployeeCosts(city, employeesFilePath);

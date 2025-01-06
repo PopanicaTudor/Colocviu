@@ -2,13 +2,16 @@
 #include "Manager.h"
 #include "Barista.h"
 #include "Waiter.h"
+
 #include <iostream>
 #include <sstream>
 #include <fstream>
 
+// Constructorul clasei Employee
 Employee::Employee(const std::string &firstName, const std::string &lastName, const std::string &role, const std::string &startHour, const std::string &endHour)
     : firstName(firstName), lastName(lastName), role(role), startHour(startHour), endHour(endHour) {}
 
+// Destructorul clasei Employee
 Employee::~Employee() {}
 
 void Employee::displayInfo() const
@@ -106,6 +109,7 @@ void Employee::updateEmployeeCSV(const std::vector<std::unique_ptr<Employee>> &e
     }
 }
 
+// Citește angajații din fișierul CSV
 std::vector<std::unique_ptr<Employee>> Employee::readEmployeesFromCSV(const std::string &filePath)
 {
     std::vector<std::unique_ptr<Employee>> employees;
@@ -159,6 +163,7 @@ std::vector<std::unique_ptr<Employee>> Employee::readEmployeesFromCSV(const std:
     return employees;
 }
 
+// Extrage ora dintr-un șir de caractere
 int Employee::extractHour(const std::string &time)
 {
     std::istringstream ss(time);
@@ -168,6 +173,7 @@ int Employee::extractHour(const std::string &time)
     return std::stoi(hour);
 }
 
+// Calculează numărul de ore lucrate
 int Employee::calculateWorkedHours(const std::string &startHour, const std::string &endHour)
 {
     int start = extractHour(startHour);

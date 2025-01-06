@@ -1,4 +1,5 @@
 #include "Workshop.h"
+
 #include <iostream>
 #include <fstream>
 
@@ -12,20 +13,20 @@ Workshop::Workshop(const std::string& name, const std::string& date, double cost
 // Destructor
 Workshop::~Workshop() {}
 
-// Display details
+// Afișarea detaliilor evenimentului
 void Workshop::displayDetails() const
 {
     Event::displayDetails();
     std::cout << "Tema: " << topic << "\nLimita participanti: " << participantLimit << "\n";
 }
 
-// Perform action
+// Acțiunea specifică evenimentului
 void Workshop::performEventAction() const
 {
     std::cout << "Alaturati-va atelierului cu tema: " << topic << "!\n";
 }
 
-// Save event to CSV
+// Salvarea evenimentului într-un fișier CSV
 void Workshop::saveEventToCSV(const std::string &city) const
 {
     std::string filePath = "../data/events/" + city + ".csv";

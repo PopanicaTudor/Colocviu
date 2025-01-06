@@ -1,4 +1,5 @@
 #include "MovieNight.h"
+
 #include <iostream>
 #include <fstream>
 
@@ -12,20 +13,20 @@ MovieNight::MovieNight(const std::string& name, const std::string& date, double 
 // Destructor
 MovieNight::~MovieNight() {}
 
-// Display details
+// Afișarea detaliilor evenimentului
 void MovieNight::displayDetails() const
 {
     Event::displayDetails();
     std::cout << "Titlu film: " << movieTitle << "\nOra incepere: " << startTime << "\n";
 }
 
-// Perform action
+// Acțiunea specifică evenimentului
 void MovieNight::performEventAction() const
 {
     std::cout << "Bucurati-va de filmul \"" << movieTitle << "\"!\n";
 }
 
-// Save event to CSV
+// Salvarea evenimentului într-un fișier CSV
 void MovieNight::saveEventToCSV(const std::string &city) const
 {
     std::string filePath = "../data/events/" + city + ".csv";

@@ -1,4 +1,5 @@
 #include "CoffeeTasting.h"
+
 #include <iostream>
 #include <fstream>
 
@@ -12,7 +13,7 @@ CoffeeTasting::CoffeeTasting(const std::string& name, const std::string& date, d
 // Destructor
 CoffeeTasting::~CoffeeTasting() {}
 
-// Display details
+// Afișarea detaliilor evenimentului
 void CoffeeTasting::displayDetails() const
 {
     Event::displayDetails();
@@ -24,13 +25,13 @@ void CoffeeTasting::displayDetails() const
     std::cout << "\n";
 }
 
-// Perform action
+// Acțiunea specifică evenimentului
 void CoffeeTasting::performEventAction() const
 {
     std::cout << "Bucurati-va de degustarea de cafea!\n";
 }
 
-// Save event to CSV
+// Salvarea evenimentului într-un fișier CSV
 void CoffeeTasting::saveEventToCSV(const std::string &city) const
 {
     std::string filePath = "../data/events/" + city + ".csv";
