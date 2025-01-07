@@ -1,0 +1,21 @@
+ID Test,Functionalitate Testata,Date de Intrare,Rezultat Asteptat,Rezultat Obținut,Status
+T01,Selectarea orasului,Bucuresti,Oras selectat: Bucuresti,Oras selectat corect,Passed
+T02,Selectarea orasului,Iasi,Oras selectat: Iasi,Oras selectat corect,Passed
+T03,Selectarea orasului,Valoare goala,Mesaj de eroare: Oras invalid!,Mesaj afisat,Passed
+T04,Adaugare angajat,"Nume: Popescu, Prenume: Ion, Rol: Barista, OraIncepere: 08:00, OraSfarit: 20:00",Angajat adaugat cu succes,Angajat adaugat,Passed
+T05,Stergere angajat,"Nume: Popescu, Prenume: Ion",Angajat sters cu succes,Angajat sters,Passed
+T06,Adaugare produs,"Nume: Cupcake, Pret: 10.0, Stoc: 20",Produs adaugat cu succes,Produs adaugat,Passed
+T07,Stergere produs,Nume: Cupcake,Produs sters cu succes,Produs sters,Passed
+T08,Simulare comanda,"Produse: [Espresso, Latte]",Total calculat corect,Total corect,Passed
+T09,Simulare comanda,Produs inexistent: Unknown,"Mesaj de eroare: ""Produs invalid!""",Mesaj afisat,Passed
+T10,Organizare eveniment,"Tip: Degustare, Tipuri cafea: 1, 2, 3, 4, Nume eveniment: Cafe Cuties, Data: 07/01/2025, Cost eveniment: 200",Eveniment organizat cu succes,Eveniment creat,Passed
+T11,Organizare eveniment,Tip invalid,"Mesaj de eroare: ""Tip invalid de eveniment!""",Mesaj afisat,Passed
+T12,Generare raport,Data raport: 06/01/2025,Raport generat si salvat,Raport corect,Passed
+T13,Gestionare exceptii (Logger),Eroare simulata,Eroare logata corect,Log corect,Passed
+T14,Fisier CSV pentru angajati,../data/employees/Brasov.csv,Fisier incarcat corect,Fisier incarcat,Passed
+T15,Fisier CSV pentru produse,../data/products/Iasi.csv,Fisier incarcat corect,Fisier incarcat,Passed
+T16,Fisier CSV invalid,../data/missing.csv,"Mesaj de eroare: ""Fisier inexistent!""",Mesaj afisat,Passed
+T17,Calcul profit zilnic,"Vanzari: 1000 RON, Costuri: 500 RON",Profit calculat: 500 RON,Profit corect,Passed
+T18,Adaugare produs cu pret negativ,Pret: -10.0,"Mesaj de eroare: ""Pret invalid!""",Mesaj afisat,Passed
+T19,Stergere produs inexistent,Nume: Mocha,"Mesaj de eroare: ""Produs inexistent!""",Mesaj afisat,Passed
+T20,Gestionare raport multiplu,"Orase: [Bucuresti, Cluj-Napoca]",Rapoarte generate pentru toate orasele selectate,Rapoarte corecte,Passed

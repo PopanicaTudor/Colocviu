@@ -1,6 +1,6 @@
-#include "menu.h"
-#include "../inventory/product.h"
-#include "../order/order.h"
+#include "Menu.h"
+#include "../inventory/Product.h"
+#include "../order/Order.h"
 
 #include <iostream>
 #include <string>

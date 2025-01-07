@@ -1,5 +1,5 @@
-#include "employeeChoices.h"
-#include "../employee/employee.h"
+#include "EmployeeChoices.h"
+#include "../employee/Employee.h"
 #include "../employee/Manager.h"
 #include "../employee/Barista.h"
 #include "../employee/Waiter.h"

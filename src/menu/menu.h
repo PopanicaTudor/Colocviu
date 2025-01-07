@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include "../inventory/product.h"
+#include "../inventory/Product.h"
 
 #include <string>
 #include <vector>

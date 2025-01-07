@@ -1,0 +1,36 @@
+[07-01-2025 17:13:38] Program started
+[07-01-2025 17:13:43] Selected city: Bucuresti
+[07-01-2025 17:13:43] Checked employees file
+[07-01-2025 17:13:43] Checked products file
+[07-01-2025 17:13:43] Checked events file
+[07-01-2025 17:13:43] Checked reports file
+[07-01-2025 17:13:43] Stored employees
+[07-01-2025 17:13:43] Stored products
+[07-01-2025 17:13:44] Selected main menu option: 6
+[07-01-2025 17:13:44] Exited main menu
+[07-01-2025 17:13:44] Program ended
+
+[07-01-2025 19:46:15] Program started
+[07-01-2025 19:46:19] Selected city: Cluj-Napoca
+[07-01-2025 19:46:19] Checked employees file
+[07-01-2025 19:46:19] Checked products file
+[07-01-2025 19:46:19] Checked events file
+[07-01-2025 19:46:19] Checked reports file
+[07-01-2025 19:46:19] Stored employees
+[07-01-2025 19:46:19] Stored products
+[07-01-2025 19:46:22] Selected main menu option: 6
+[07-01-2025 19:46:22] Exited main menu
+[07-01-2025 19:46:22] Program ended
+
+[07-01-2025 19:46:33] Program started
+[07-01-2025 19:46:37] Selected city: Bucuresti
+[07-01-2025 19:46:37] Checked employees file
+[07-01-2025 19:46:37] Checked products file
+[07-01-2025 19:46:37] Checked events file
+[07-01-2025 19:46:37] Checked reports file
+[07-01-2025 19:46:37] Stored employees
+[07-01-2025 19:46:37] Stored products
+[07-01-2025 19:46:38] Selected main menu option: 6
+[07-01-2025 19:46:38] Exited main menu
+[07-01-2025 19:46:38] Program ended
+

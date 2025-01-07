@@ -1,3 +1,4 @@
+#include "StoreProducts.h"
 #include "../util/CSVParser.h"
 #include "../inventory/Product.h"
 

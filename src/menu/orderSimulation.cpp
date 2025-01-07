@@ -1,6 +1,7 @@
-#include "orderSimulation.h"
-#include "../inventory/product.h"
-#include "../order/order.h"
+#include "OrderSimulation.h"
+#include "../inventory/Product.h"
+#include "../order/Order.h"
+#include "ProductChoices.h"
 
 #include <iostream>
 #include <string>
@@ -58,6 +59,9 @@ void orderSimulation(std::string selectedCity, std::string productsFilePath, std
     // Adăugăm produse în comandă
     while (true)
     {
+        std::cout << "\nAlegeti produsul pe care doriti sa il adaugati in comanda:\n";
+        productChoice4(selectedCity, products);
+
         std::string productName;
         std::cout << "Nume produs: ";
         std::cin >> productName;

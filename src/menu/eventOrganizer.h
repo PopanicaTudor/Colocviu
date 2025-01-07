@@ -1,12 +1,12 @@
 #ifndef EVENTORGANIZER_H
 #define EVENTORGANIZER_H
 
-#include "menu.h"
-#include "eventChoices.h"
-#include "../event/event.h"
-#include "../event/movieNight.h"
-#include "../event/workshop.h"
-#include "../event/coffeeTasting.h"
+#include "Menu.h"
+#include "EventChoices.h"
+#include "../event/Event.h"
+#include "../event/MovieNight.h"
+#include "../event/Workshop.h"
+#include "../event/CoffeeTasting.h"
 
 #include <string>
 

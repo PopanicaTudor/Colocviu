@@ -1,4 +1,4 @@
-#include "reportGenerator.h"
+#include "ReportGenerator.h"
 #include "../report/Report.h"
 
 #include <iostream>

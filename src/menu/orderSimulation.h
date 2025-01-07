@@ -1,7 +1,7 @@
 #ifndef ORDERSIMULATION_H
 #define ORDERSIMULATION_H
 
-#include "../inventory/product.h"
+#include "../inventory/Product.h"
 
 #include <string>
 #include <vector>

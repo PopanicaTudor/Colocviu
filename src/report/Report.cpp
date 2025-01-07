@@ -171,7 +171,7 @@ double Report::calculateTotalIncome(const std::string& date, const std::string& 
 {
     double totalOrderCost = calculateOrderCosts(date, city, ordersFilePath);
 
-    return totalOrderCost;
+    return totalOrderCost / (1 - profitMargin);
 }
 
 // Calcularea profitului

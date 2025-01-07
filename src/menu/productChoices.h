@@ -1,7 +1,7 @@
 #ifndef PRODUCTCHOICES_H
 #define PRODUCTCHOICES_H
 
-#include "../inventory/product.h"
+#include "../inventory/Product.h"
 
 #include <string>
 #include <vector>

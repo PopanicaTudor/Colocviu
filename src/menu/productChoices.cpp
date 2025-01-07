@@ -1,5 +1,5 @@
-#include "productChoices.h"
-#include "../inventory/product.h"
+#include "ProductChoices.h"
+#include "../inventory/Product.h"
 
 #include <iostream>
 #include <vector>
