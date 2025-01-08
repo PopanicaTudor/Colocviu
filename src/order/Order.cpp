@@ -24,8 +24,8 @@ Order::Order(const std::string &customerFirstName, const std::string &customerLa
 
     if (isLoyalCustomer(orderHistory))
     {
-        std::cout << customerFirstName << " " << customerLastName << " este client fidel! Se aplica o reducere de 25%.\n";
-        applyDiscount(0.25); // 25% discount
+        std::cout << customerFirstName << " " << customerLastName << " este client fidel! Se aplica o reducere de 10%.\n";
+        applyDiscount(0.10); // 10% discount
     }
 
     // Salvează comanda în fișier

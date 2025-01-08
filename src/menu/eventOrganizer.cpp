@@ -47,7 +47,11 @@ void eventOrganizer(std::string selectedCity)
         {
             eventChoice3(movieTitle, startTime);
         }
-        else
+        else if (eventChoice == 4)
+        {
+            return;
+        }
+        
         {
             throw std::invalid_argument("Alegere eveniment invalidă!");
         }

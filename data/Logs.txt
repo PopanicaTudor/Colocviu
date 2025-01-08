@@ -34,15 +34,3 @@
 [07-01-2025 19:46:38] Exited main menu
 [07-01-2025 19:46:38] Program ended
 
-[08-01-2025 13:28:59] Program started
-[08-01-2025 13:32:14] Selected city: Bucuresti
-[08-01-2025 13:32:14] Checked employees file
-[08-01-2025 13:32:14] Checked products file
-[08-01-2025 13:32:14] Checked events file
-[08-01-2025 13:32:14] Checked reports file
-[08-01-2025 13:32:14] Stored employees
-[08-01-2025 13:32:14] Stored products
-[08-01-2025 13:35:34] Selected main menu option: 3
-[08-01-2025 13:35:50] Error executing order simulation: Produsul Capuccino nu a fost gasit.
-[08-01-2025 13:35:58] Selected main menu option: 3
-[08-01-2025 13:36:24] Executed order simulation
