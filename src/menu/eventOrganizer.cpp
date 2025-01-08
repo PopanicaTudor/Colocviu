@@ -32,33 +32,21 @@ void eventOrganizer(std::string selectedCity)
 
     int eventChoice = eventMenu(selectedCity);
 
-    try
+    // Selectați tipul de eveniment
+    if (eventChoice == 1)
     {
-        // Selectați tipul de eveniment
-        if (eventChoice == 1)
-        {
-            eventChoice1(coffeeTypes);
-        }
-        else if (eventChoice == 2)
-        {
-            eventChoice2(topic, participantLimit);
-        }
-        else if (eventChoice == 3)
-        {
-            eventChoice3(movieTitle, startTime);
-        }
-        else if (eventChoice == 4)
-        {
-            return;
-        }
-        
-        {
-            throw std::invalid_argument("Alegere eveniment invalidă!");
-        }
+        eventChoice1(coffeeTypes);
     }
-    catch (const std::exception &e)
+    else if (eventChoice == 2)
     {
-        std::cerr << "A aparut o eroare la selectarea tipului de eveniment: " << e.what() << "\n";
+        eventChoice2(topic, participantLimit);
+    }
+    else if (eventChoice == 3)
+    {
+        eventChoice3(movieTitle, startTime);
+    }
+    else
+    {
         return;
     }
 
