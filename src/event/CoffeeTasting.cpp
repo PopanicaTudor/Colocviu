@@ -5,7 +5,7 @@
 
 // Constructor
 CoffeeTasting::CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes)
-    : Event(name, date, cost, city), coffeeTypes(coffeeTypes) {}
+    : Event(name, date, cost, city), coffeeTypes(coffeeTypes) { std::cout << "Tasting creat: " << name << std::endl; }
 
 // Destructor
 CoffeeTasting::~CoffeeTasting() {}

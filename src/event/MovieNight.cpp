@@ -5,7 +5,7 @@
 
 // Constructor
 MovieNight::MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime)
-    : Event(name, date, cost, city), movieTitle(movieTitle), startTime(startTime) {}
+    : Event(name, date, cost, city), movieTitle(movieTitle), startTime(startTime) { std::cout << "Movie creat: " << name << std::endl; }
 
 // Destructor
 MovieNight::~MovieNight() {}

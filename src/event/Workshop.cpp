@@ -5,7 +5,7 @@
 
 // Constructor
 Workshop::Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit)
-    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) {}
+    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) { std::cout << "Workshop creat: " << name << std::endl; }
 
 // Destructor
 Workshop::~Workshop() {}

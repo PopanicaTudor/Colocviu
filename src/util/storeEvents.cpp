@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <map>
 #include <algorithm>
 
 // Funcție pentru a stoca evenimentele din fișierul CSV
@@ -18,6 +19,8 @@ std::vector<std::unique_ptr<Event>> storeEvents(std::string eventsFilePath)
 
     // Popularea vectorului de evenimente
     std::vector<std::unique_ptr<Event>> events;
+
+    std::string additionalInfo;
     for (const auto &row : eventData)
     {
         std::string name = row.at("Name");
@@ -28,7 +31,8 @@ std::vector<std::unique_ptr<Event>> storeEvents(std::string eventsFilePath)
         if (type == "Coffee Tasting")
         {
             std::vector<std::string> coffeeTypes;
-            std::string additionalInfo = row.at("AdditionalInfo");
+
+            additionalInfo = row.at("AdditionalInfo");
             std::istringstream iss(additionalInfo);
             std::string coffeeTypesStr;
 
@@ -48,10 +52,11 @@ std::vector<std::unique_ptr<Event>> storeEvents(std::string eventsFilePath)
         }
         else if (type == "Workshop")
         {
-            std::string additionalInfo = row.at("AdditionalInfo");
-            std::istringstream iss(additionalInfo);
             std::string topic;
             int participantLimit;
+
+            additionalInfo = row.at("AdditionalInfo");
+            std::istringstream iss(additionalInfo);
 
             std::getline(iss, topic, ' ');
             std::getline(iss, topic, ' ');
@@ -67,10 +72,11 @@ std::vector<std::unique_ptr<Event>> storeEvents(std::string eventsFilePath)
         }
         else if (type == "Movie Night")
         {
-            std::string additionalInfo = row.at("AdditionalInfo");
-            std::istringstream iss(additionalInfo);
             std::string movieTitle;
             std::string startTime;
+
+            additionalInfo = row.at("AdditionalInfo");
+            std::istringstream iss(additionalInfo);
 
             std::getline(iss, movieTitle, ' ');
             std::getline(iss, movieTitle, ' ');
