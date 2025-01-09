@@ -10,7 +10,7 @@ private:
     std::string startTime;
 
 public:
-    MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime, const std::string& city);
+    MovieNight(const std::string& name, const std::string& date, double cost, const std::string& movieTitle, const std::string& startTime);
     ~MovieNight();
 
     void displayDetails() const override;

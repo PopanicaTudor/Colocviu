@@ -10,7 +10,7 @@ private:
     int participantLimit;
 
 public:
-    Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit, const std::string& city);
+    Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit);
     ~Workshop();
 
     void displayDetails() const override;

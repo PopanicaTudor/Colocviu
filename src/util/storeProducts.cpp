@@ -13,7 +13,7 @@ std::vector<std::unique_ptr<Product>> storeProducts(std::string productsFilePath
 {
     // Citirea produselor din fișierul CSV
     CSVParser parser(productsFilePath);
-    std::vector<std::map<std::string, std::string>> productData = parser.readCSV();
+    std::vector<std::map<std::string, std::string>> productData = parser.readCSV(productsFilePath);
 
     // Popularea vectorului de produse
     std::vector<std::unique_ptr<Product>> products;

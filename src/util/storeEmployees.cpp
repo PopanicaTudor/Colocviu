@@ -16,7 +16,7 @@ std::vector<std::unique_ptr<Employee>> storeEmployees(std::string employeesFileP
 {
     // Citește angajații din fișierul CSV
     CSVParser parser(employeesFilePath);
-    std::vector<std::map<std::string, std::string>> employeeData = parser.readCSV();
+    std::vector<std::map<std::string, std::string>> employeeData = parser.readCSV(employeesFilePath);
 
     // Populează vectorul de angajați
     std::vector<std::unique_ptr<Employee>> employees;

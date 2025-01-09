@@ -10,7 +10,7 @@ private:
     std::vector<std::string> coffeeTypes;
 
 public:
-    CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes, const std::string& city);
+    CoffeeTasting(const std::string& name, const std::string& date, double cost, const std::vector<std::string>& coffeeTypes);
     ~CoffeeTasting();
 
     void displayDetails() const override;

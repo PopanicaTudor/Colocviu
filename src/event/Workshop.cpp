@@ -4,11 +4,8 @@
 #include <fstream>
 
 // Constructor
-Workshop::Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit, const std::string& city)
-    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) 
-{
-    saveEventToCSV(city); // Save event to CSV
-}
+Workshop::Workshop(const std::string& name, const std::string& date, double cost, const std::string& topic, int participantLimit)
+    : Event(name, date, cost, city), topic(topic), participantLimit(participantLimit) {}
 
 // Destructor
 Workshop::~Workshop() {}
@@ -17,7 +14,7 @@ Workshop::~Workshop() {}
 void Workshop::displayDetails() const
 {
     Event::displayDetails();
-    std::cout << "Tema: " << topic << "\nLimita participanti: " << participantLimit << "\n";
+    std::cout << ", Tema: " << topic << ", Limita participanti: " << participantLimit << "\n";
 }
 
 // Acțiunea specifică evenimentului
@@ -27,10 +24,8 @@ void Workshop::performEventAction() const
 }
 
 // Salvarea evenimentului într-un fișier CSV
-void Workshop::saveEventToCSV(const std::string &city) const
+void Workshop::saveEventToCSV(const std::string &filePath) const
 {
-    std::string filePath = "../data/events/" + city + ".csv";
-
     std::ofstream file(filePath, std::ios::app);
     if (file.is_open())
     {

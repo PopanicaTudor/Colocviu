@@ -5,9 +5,15 @@
 #include "../event/MovieNight.h"
 #include "../event/Workshop.h"
 #include "../event/CoffeeTasting.h"
+#include "EventOrganizerChoices.h"
 
-void eventChoice1(std::vector<std::string> &coffeeTypes);
-void eventChoice2(std::string &topic, int &participantLimit);
-void eventChoice3(std::string &movieTitle, std::string &startTime);
+#include <iostream>
+#include <vector>
+#include <string>
+#include <memory>
+
+void eventChoice1(std::string eventsFilePath, std::vector<std::unique_ptr<Event>> &events);
+void eventChoice2(std::string eventsFilePath, std::vector<std::unique_ptr<Event>> &events);
+void eventChoice3(std::string selectedCity, std::vector<std::unique_ptr<Event>> &events);
 
 #endif

@@ -34,3 +34,782 @@
 [07-01-2025 19:46:38] Exited main menu
 [07-01-2025 19:46:38] Program ended
 
+[09-01-2025 01:10:59] Program started
+[09-01-2025 01:11:01] Selected city: Bucuresti
+[09-01-2025 01:11:01] Checked employees file
+[09-01-2025 01:11:01] Checked products file
+[09-01-2025 01:11:01] Checked events file
+[09-01-2025 01:11:01] Checked reports file
+[09-01-2025 01:11:01] Stored employees
+[09-01-2025 01:11:01] Stored products
+[09-01-2025 01:11:01] Error storing events: stoi
+[09-01-2025 01:11:02] Selected main menu option: 3
+[09-01-2025 01:11:02] Entered event menu
+[09-01-2025 01:11:04] Selected event menu option: 3
+[09-01-2025 01:11:04] Executed event menu option 3
+[09-01-2025 01:11:06] Selected event menu option: 1
+[09-01-2025 01:11:19] Error executing event menu option 1: std::bad_alloc
+[09-01-2025 01:15:03] Program started
+[09-01-2025 01:15:05] Selected city: Bucuresti
+[09-01-2025 01:15:05] Checked employees file
+[09-01-2025 01:15:05] Checked products file
+[09-01-2025 01:15:05] Checked events file
+[09-01-2025 01:15:05] Checked reports file
+[09-01-2025 01:15:05] Stored employees
+[09-01-2025 01:15:05] Stored products
+[09-01-2025 01:15:05] Error storing events: stoi
+[09-01-2025 01:15:08] Selected main menu option: 3
+[09-01-2025 01:15:08] Entered event menu
+[09-01-2025 01:15:09] Selected event menu option: 3
+[09-01-2025 01:15:09] Executed event menu option 3
+[09-01-2025 01:15:16] Selected event menu option: 1
+[09-01-2025 01:15:27] Error executing event menu option 1: std::bad_alloc
+[09-01-2025 01:20:09] Program started
+[09-01-2025 01:20:11] Selected city: Bucuresti
+[09-01-2025 01:20:11] Checked employees file
+[09-01-2025 01:20:11] Checked products file
+[09-01-2025 01:20:11] Checked events file
+[09-01-2025 01:20:11] Checked reports file
+[09-01-2025 01:20:11] Stored employees
+[09-01-2025 01:20:11] Stored products
+[09-01-2025 01:20:11] Error storing events: stoi
+[09-01-2025 01:20:12] Selected main menu option: 3
+[09-01-2025 01:20:12] Entered event menu
+[09-01-2025 01:20:14] Selected event menu option: 3
+[09-01-2025 01:20:14] Executed event menu option 3
+[09-01-2025 01:20:16] Selected event menu option: 2
+[09-01-2025 01:20:27] Error executing event menu option 2: Evenimentul nu a fost gasit.
+[09-01-2025 01:23:34] Program started
+[09-01-2025 01:23:40] Selected city: Bucuresti
+[09-01-2025 01:23:40] Checked employees file
+[09-01-2025 01:23:40] Checked products file
+[09-01-2025 01:23:40] Checked events file
+[09-01-2025 01:23:40] Checked reports file
+[09-01-2025 01:23:40] Stored employees
+[09-01-2025 01:23:40] Stored products
+[09-01-2025 01:23:40] Error storing events: stoi
+[09-01-2025 01:26:00] Program started
+[09-01-2025 01:26:01] Selected city: Bucuresti
+[09-01-2025 01:26:01] Checked employees file
+[09-01-2025 01:26:01] Checked products file
+[09-01-2025 01:26:01] Checked events file
+[09-01-2025 01:26:01] Checked reports file
+[09-01-2025 01:26:01] Stored employees
+[09-01-2025 01:26:01] Stored products
+[09-01-2025 01:26:01] Stored events
+[09-01-2025 01:27:50] Program started
+[09-01-2025 01:27:52] Selected city: Bucuresti
+[09-01-2025 01:27:52] Checked employees file
+[09-01-2025 01:27:52] Checked products file
+[09-01-2025 01:27:52] Checked events file
+[09-01-2025 01:27:52] Checked reports file
+[09-01-2025 01:27:52] Stored employees
+[09-01-2025 01:27:52] Stored products
+[09-01-2025 01:27:52] Stored events
+[09-01-2025 01:31:36] Selected main menu option: 6
+[09-01-2025 01:31:36] Exited main menu
+[09-01-2025 01:31:36] Program ended
+
+[09-01-2025 01:31:44] Program started
+[09-01-2025 01:31:45] Selected city: Bucuresti
+[09-01-2025 01:31:45] Checked employees file
+[09-01-2025 01:31:45] Checked products file
+[09-01-2025 01:31:45] Checked events file
+[09-01-2025 01:31:45] Checked reports file
+[09-01-2025 01:31:45] Stored employees
+[09-01-2025 01:31:45] Stored products
+[09-01-2025 01:31:45] Stored events
+[09-01-2025 01:32:31] Program started
+[09-01-2025 01:32:31] Selected city: Bucuresti
+[09-01-2025 01:32:31] Checked employees file
+[09-01-2025 01:32:31] Checked products file
+[09-01-2025 01:32:31] Checked events file
+[09-01-2025 01:32:31] Checked reports file
+[09-01-2025 01:32:31] Stored employees
+[09-01-2025 01:32:31] Stored products
+[09-01-2025 01:32:31] Stored events
+[09-01-2025 01:34:18] Program started
+[09-01-2025 01:34:18] Selected city: Bucuresti
+[09-01-2025 01:34:18] Checked employees file
+[09-01-2025 01:34:18] Checked products file
+[09-01-2025 01:34:18] Checked events file
+[09-01-2025 01:34:18] Checked reports file
+[09-01-2025 01:34:18] Stored employees
+[09-01-2025 01:34:18] Stored products
+[09-01-2025 01:34:18] Stored events
+[09-01-2025 01:52:54] Program started
+[09-01-2025 01:52:56] Selected city: Bucuresti
+[09-01-2025 01:52:56] Checked employees file
+[09-01-2025 01:52:56] Checked products file
+[09-01-2025 01:52:56] Checked events file
+[09-01-2025 01:52:56] Checked reports file
+[09-01-2025 01:52:56] Stored employees
+[09-01-2025 01:52:56] Stored products
+[09-01-2025 01:52:56] Error storing events: std::bad_alloc
+[09-01-2025 01:56:42] Program started
+[09-01-2025 01:56:44] Selected city: Bucuresti
+[09-01-2025 01:56:44] Checked employees file
+[09-01-2025 01:56:44] Checked products file
+[09-01-2025 01:56:44] Checked events file
+[09-01-2025 01:56:44] Checked reports file
+[09-01-2025 01:56:44] Stored employees
+[09-01-2025 01:56:44] Stored products
+[09-01-2025 01:56:44] Error storing events: std::bad_alloc
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:02] Selected main menu option: 447
+[09-01-2025 01:57:02] Invalid main menu option selected
+[09-01-2025 01:57:09] Program started
+[09-01-2025 01:57:11] Selected city: Bucuresti
+[09-01-2025 01:57:11] Checked employees file
+[09-01-2025 01:57:11] Checked products file
+[09-01-2025 01:57:11] Checked events file
+[09-01-2025 01:57:11] Checked reports file
+[09-01-2025 01:57:11] Stored employees
+[09-01-2025 01:57:11] Stored products
+[09-01-2025 01:57:11] Error storing events: std::bad_alloc
+[09-01-2025 01:58:05] Program started
+[09-01-2025 01:58:06] Selected city: Bucuresti
+[09-01-2025 01:58:06] Checked employees file
+[09-01-2025 01:58:06] Checked products file
+[09-01-2025 01:58:06] Checked events file
+[09-01-2025 01:58:06] Checked reports file
+[09-01-2025 01:58:06] Stored employees
+[09-01-2025 01:58:06] Stored products
+[09-01-2025 01:58:06] Error storing events: basic_string::_M_create
+[09-01-2025 01:58:53] Program started
+[09-01-2025 01:58:55] Selected city: Bucuresti
+[09-01-2025 01:58:55] Checked employees file
+[09-01-2025 01:58:55] Checked products file
+[09-01-2025 01:58:55] Checked events file
+[09-01-2025 01:58:55] Checked reports file
+[09-01-2025 01:58:55] Stored employees
+[09-01-2025 01:58:55] Stored products
+[09-01-2025 01:58:55] Stored events
+[09-01-2025 02:01:01] Program started
+[09-01-2025 02:01:10] Program started
+[09-01-2025 02:01:12] Selected city: Bucuresti
+[09-01-2025 02:01:12] Checked employees file
+[09-01-2025 02:01:12] Checked products file
+[09-01-2025 02:01:12] Checked events file
+[09-01-2025 02:01:12] Checked reports file
+[09-01-2025 02:01:12] Stored employees
+[09-01-2025 02:01:12] Stored products
+[09-01-2025 02:01:12] Stored events
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:51] Selected main menu option: 559
+[09-01-2025 02:01:51] Invalid main menu option selected
+[09-01-2025 02:01:59] Program started
+[09-01-2025 02:02:00] Selected city: Bucuresti
+[09-01-2025 02:02:00] Checked employees file
+[09-01-2025 02:02:00] Checked products file
+[09-01-2025 02:02:00] Checked events file
+[09-01-2025 02:02:00] Checked reports file
+[09-01-2025 02:02:00] Stored employees
+[09-01-2025 02:02:00] Stored products
+[09-01-2025 02:02:00] Stored events
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:33] Selected main menu option: 587
+[09-01-2025 02:03:33] Invalid main menu option selected
+[09-01-2025 02:03:40] Program started
+[09-01-2025 02:03:40] Selected city: Bucuresti
+[09-01-2025 02:03:40] Checked employees file
+[09-01-2025 02:03:40] Checked products file
+[09-01-2025 02:03:40] Checked events file
+[09-01-2025 02:03:40] Checked reports file
+[09-01-2025 02:03:40] Stored employees
+[09-01-2025 02:03:40] Stored products
+[09-01-2025 02:03:40] Stored events
+[09-01-2025 02:04:22] Program started
+[09-01-2025 02:04:22] Selected city: Bucuresti
+[09-01-2025 02:04:22] Checked employees file
+[09-01-2025 02:04:22] Checked products file
+[09-01-2025 02:04:22] Checked events file
+[09-01-2025 02:04:22] Checked reports file
+[09-01-2025 02:04:22] Stored employees
+[09-01-2025 02:04:22] Stored products
+[09-01-2025 02:04:22] Error storing events: stoi
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:47] Selected main menu option: 721
+[09-01-2025 02:04:47] Invalid main menu option selected
+[09-01-2025 02:04:53] Program started
+[09-01-2025 02:04:53] Selected city: Bucuresti
+[09-01-2025 02:04:53] Checked employees file
+[09-01-2025 02:04:53] Checked products file
+[09-01-2025 02:04:53] Checked events file
+[09-01-2025 02:04:53] Checked reports file
+[09-01-2025 02:04:53] Stored employees
+[09-01-2025 02:04:53] Stored products
+[09-01-2025 02:04:53] Error storing events: stoi
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:04:56] Selected main menu option: 633
+[09-01-2025 02:04:56] Invalid main menu option selected
+[09-01-2025 02:05:19] Program started
+[09-01-2025 02:05:19] Selected city: Bucuresti
+[09-01-2025 02:05:19] Checked employees file
+[09-01-2025 02:05:19] Checked products file
+[09-01-2025 02:05:19] Checked events file
+[09-01-2025 02:05:19] Checked reports file
+[09-01-2025 02:05:19] Stored employees
+[09-01-2025 02:05:19] Stored products
+[09-01-2025 02:05:19] Error storing events: stoi
+[09-01-2025 02:05:38] Program started
+[09-01-2025 02:05:39] Selected city: Bucuresti
+[09-01-2025 02:05:39] Checked employees file
+[09-01-2025 02:05:39] Checked products file
+[09-01-2025 02:05:39] Checked events file
+[09-01-2025 02:05:39] Checked reports file
+[09-01-2025 02:05:39] Stored employees
+[09-01-2025 02:05:39] Stored products
+[09-01-2025 02:05:39] Error storing events: stoi
+[09-01-2025 02:06:51] Program started
+[09-01-2025 02:06:51] Selected city: Bucuresti
+[09-01-2025 02:06:51] Checked employees file
+[09-01-2025 02:06:51] Checked products file
+[09-01-2025 02:06:51] Checked events file
+[09-01-2025 02:06:51] Checked reports file
+[09-01-2025 02:06:51] Stored employees
+[09-01-2025 02:06:51] Stored products
+[09-01-2025 02:06:51] Error storing events: std::bad_alloc
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:25] Selected main menu option: 511
+[09-01-2025 02:07:25] Invalid main menu option selected
+[09-01-2025 02:07:33] Program started
+[09-01-2025 02:07:33] Selected city: Bucuresti
+[09-01-2025 02:07:33] Checked employees file
+[09-01-2025 02:07:33] Checked products file
+[09-01-2025 02:07:33] Checked events file
+[09-01-2025 02:07:33] Checked reports file
+[09-01-2025 02:07:33] Stored employees
+[09-01-2025 02:07:33] Stored products
+[09-01-2025 02:07:33] Error storing events: std::bad_alloc
+[09-01-2025 02:07:56] Program started
+[09-01-2025 02:07:57] Selected city: Bucuresti
+[09-01-2025 02:07:57] Checked employees file
+[09-01-2025 02:07:57] Checked products file
+[09-01-2025 02:07:57] Checked events file
+[09-01-2025 02:07:57] Checked reports file
+[09-01-2025 02:07:57] Stored employees
+[09-01-2025 02:07:57] Stored products
+[09-01-2025 02:07:57] Stored events
+[09-01-2025 02:08:08] Selected main menu option: 6
+[09-01-2025 02:08:08] Exited main menu
+[09-01-2025 02:08:08] Program ended
+
+[09-01-2025 02:08:10] Selected city: Bucuresti
+[09-01-2025 02:08:10] Checked employees file
+[09-01-2025 02:08:10] Checked products file
+[09-01-2025 02:08:10] Checked events file
+[09-01-2025 02:08:10] Checked reports file
+[09-01-2025 02:08:10] Stored employees
+[09-01-2025 02:08:10] Stored products
+[09-01-2025 02:08:10] Error storing events: std::bad_alloc
+[09-01-2025 02:08:12] Selected main menu option: 3
+[09-01-2025 02:08:12] Entered event menu
+[09-01-2025 02:08:13] Selected event menu option: 4
+[09-01-2025 02:08:13] Exited event menu
+[09-01-2025 02:08:15] Selected main menu option: 3
+[09-01-2025 02:08:15] Entered event menu
+[09-01-2025 02:08:16] Selected event menu option: 3
+[09-01-2025 02:08:16] Executed event menu option 3
+[09-01-2025 02:08:24] Selected event menu option: 522
+[09-01-2025 02:08:24] Invalid event menu option selected
+[09-01-2025 02:10:57] Program started
+[09-01-2025 02:10:57] Selected city: Bucuresti
+[09-01-2025 02:10:57] Checked employees file
+[09-01-2025 02:10:57] Checked products file
+[09-01-2025 02:10:57] Checked events file
+[09-01-2025 02:10:57] Checked reports file
+[09-01-2025 02:10:57] Stored employees
+[09-01-2025 02:10:57] Stored products
+[09-01-2025 02:10:57] Stored events
+[09-01-2025 02:12:01] Selected main menu option: 3
+[09-01-2025 02:12:01] Entered event menu
+[09-01-2025 02:12:02] Selected event menu option: 3
+[09-01-2025 02:12:02] Executed event menu option 3
+[09-01-2025 02:13:05] Selected event menu option: 320
+[09-01-2025 02:13:05] Invalid event menu option selected
+[09-01-2025 02:13:11] Program started
+[09-01-2025 02:13:12] Selected city: Bucuresti
+[09-01-2025 02:13:12] Checked employees file
+[09-01-2025 02:13:12] Checked products file
+[09-01-2025 02:13:12] Checked events file
+[09-01-2025 02:13:12] Checked reports file
+[09-01-2025 02:13:12] Stored employees
+[09-01-2025 02:13:12] Stored products
+[09-01-2025 02:13:12] Error storing events: basic_string::_M_create
+[09-01-2025 02:13:18] Selected main menu option: 3
+[09-01-2025 02:13:18] Entered event menu
+[09-01-2025 02:13:19] Selected event menu option: 3
+[09-01-2025 02:13:19] Executed event menu option 3
+[09-01-2025 02:13:22] Selected event menu option: 4
+[09-01-2025 02:13:22] Exited event menu
+[09-01-2025 02:13:25] Selected main menu option: 6
+[09-01-2025 02:13:25] Exited main menu
+[09-01-2025 02:13:25] Program ended
+
+[09-01-2025 02:15:53] Program started
+[09-01-2025 02:15:54] Selected city: Bucuresti
+[09-01-2025 02:15:54] Checked employees file
+[09-01-2025 02:15:54] Checked products file
+[09-01-2025 02:15:54] Checked events file
+[09-01-2025 02:15:54] Checked reports file
+[09-01-2025 02:15:54] Stored employees
+[09-01-2025 02:15:54] Stored products
+[09-01-2025 02:15:54] Error storing events: basic_string::_M_create
+[09-01-2025 02:16:53] Selected main menu option: 479
+[09-01-2025 02:16:53] Invalid main menu option selected
+[09-01-2025 02:17:01] Program started
+[09-01-2025 02:17:01] Selected city: Bucuresti
+[09-01-2025 02:17:01] Checked employees file
+[09-01-2025 02:17:01] Checked products file
+[09-01-2025 02:17:01] Checked events file
+[09-01-2025 02:17:01] Checked reports file
+[09-01-2025 02:17:01] Stored employees
+[09-01-2025 02:17:01] Stored products
+[09-01-2025 02:17:01] Error storing events: basic_string::_M_create
+[09-01-2025 02:18:14] Program started
+[09-01-2025 02:18:15] Selected city: Bucuresti
+[09-01-2025 02:18:15] Checked employees file
+[09-01-2025 02:18:15] Checked products file
+[09-01-2025 02:18:15] Checked events file
+[09-01-2025 02:18:15] Checked reports file
+[09-01-2025 02:18:15] Stored employees
+[09-01-2025 02:18:15] Stored products
+[09-01-2025 02:18:15] Error storing events: basic_string::_M_create
+[09-01-2025 02:18:56] Program started
+[09-01-2025 02:18:57] Selected city: Bucuresti
+[09-01-2025 02:18:57] Checked employees file
+[09-01-2025 02:18:57] Checked products file
+[09-01-2025 02:18:57] Checked events file
+[09-01-2025 02:18:57] Checked reports file
+[09-01-2025 02:18:57] Stored employees
+[09-01-2025 02:18:57] Stored products
+[09-01-2025 02:18:57] Error storing events: basic_string::_M_create
+[09-01-2025 02:19:43] Selected main menu option: 561
+[09-01-2025 02:19:43] Invalid main menu option selected
+[09-01-2025 02:19:59] Program started
+[09-01-2025 02:19:59] Selected city: Bucuresti
+[09-01-2025 02:19:59] Checked employees file
+[09-01-2025 02:19:59] Checked products file
+[09-01-2025 02:19:59] Checked events file
+[09-01-2025 02:19:59] Checked reports file
+[09-01-2025 02:19:59] Stored employees
+[09-01-2025 02:19:59] Stored products
+[09-01-2025 02:19:59] Stored events
+[09-01-2025 02:23:31] Selected main menu option: 432
+[09-01-2025 02:23:31] Invalid main menu option selected
+[09-01-2025 02:23:37] Program started
+[09-01-2025 02:23:39] Selected city: Bucuresti
+[09-01-2025 02:23:39] Checked employees file
+[09-01-2025 02:23:39] Checked products file
+[09-01-2025 02:23:39] Checked events file
+[09-01-2025 02:23:39] Checked reports file
+[09-01-2025 02:23:39] Stored employees
+[09-01-2025 02:23:39] Stored products
+[09-01-2025 02:23:39] Stored events
+[09-01-2025 02:24:30] Selected main menu option: 314
+[09-01-2025 02:24:30] Invalid main menu option selected
+[09-01-2025 02:24:36] Program started
+[09-01-2025 02:24:37] Selected city: Bucuresti
+[09-01-2025 02:24:37] Checked employees file
+[09-01-2025 02:24:37] Checked products file
+[09-01-2025 02:24:37] Checked events file
+[09-01-2025 02:24:37] Checked reports file
+[09-01-2025 02:24:37] Stored employees
+[09-01-2025 02:24:37] Stored products
+[09-01-2025 02:24:37] Stored events
+[09-01-2025 02:25:36] Selected main menu option: 395
+[09-01-2025 02:25:36] Invalid main menu option selected
+[09-01-2025 02:25:42] Program started
+[09-01-2025 02:25:43] Selected city: Bucuresti
+[09-01-2025 02:25:43] Checked employees file
+[09-01-2025 02:25:43] Checked products file
+[09-01-2025 02:25:43] Checked events file
+[09-01-2025 02:25:43] Checked reports file
+[09-01-2025 02:25:43] Stored employees
+[09-01-2025 02:25:43] Stored products
+[09-01-2025 02:25:43] Error storing events: std::bad_alloc
+[09-01-2025 02:26:06] Selected main menu option: 680
+[09-01-2025 02:26:06] Invalid main menu option selected
+[09-01-2025 02:26:38] Program started
+[09-01-2025 02:26:40] Selected city: Bucuresti
+[09-01-2025 02:26:40] Checked employees file
+[09-01-2025 02:26:40] Checked products file
+[09-01-2025 02:26:40] Checked events file
+[09-01-2025 02:26:40] Checked reports file
+[09-01-2025 02:26:40] Stored employees
+[09-01-2025 02:26:40] Stored products
+[09-01-2025 02:26:40] Stored events
+[09-01-2025 02:27:27] Selected main menu option: 552
+[09-01-2025 02:27:27] Invalid main menu option selected
+[09-01-2025 02:27:34] Program started
+[09-01-2025 02:27:35] Selected city: Bucuresti
+[09-01-2025 02:27:35] Checked employees file
+[09-01-2025 02:27:35] Checked products file
+[09-01-2025 02:27:35] Checked events file
+[09-01-2025 02:27:35] Checked reports file
+[09-01-2025 02:27:35] Stored employees
+[09-01-2025 02:27:35] Stored products
+[09-01-2025 02:27:35] Error storing events: std::bad_alloc
+[09-01-2025 02:27:56] Selected main menu option: 542
+[09-01-2025 02:27:56] Invalid main menu option selected
+[09-01-2025 02:28:02] Program started
+[09-01-2025 02:28:03] Selected city: Bucuresti
+[09-01-2025 02:28:03] Checked employees file
+[09-01-2025 02:28:03] Checked products file
+[09-01-2025 02:28:03] Checked events file
+[09-01-2025 02:28:03] Checked reports file
+[09-01-2025 02:28:03] Stored employees
+[09-01-2025 02:28:03] Stored products
+[09-01-2025 02:28:03] Error storing events: std::bad_alloc
+[09-01-2025 02:28:09] Selected main menu option: 5
+[09-01-2025 02:28:10] Executed report generator
+[09-01-2025 02:28:18] Selected main menu option: 6
+[09-01-2025 02:28:18] Exited main menu
+[09-01-2025 02:28:18] Program ended
+
+[09-01-2025 02:30:59] Program started
+[09-01-2025 02:31:00] Selected city: Bucuresti
+[09-01-2025 02:31:00] Checked employees file
+[09-01-2025 02:31:00] Checked products file
+[09-01-2025 02:31:00] Checked events file
+[09-01-2025 02:31:00] Checked reports file
+[09-01-2025 02:31:00] Stored employees
+[09-01-2025 02:31:00] Stored products
+[09-01-2025 02:31:00] Error storing events: std::bad_alloc
+[09-01-2025 02:33:44] Selected main menu option: 304
+[09-01-2025 02:33:44] Invalid main menu option selected
+[09-01-2025 02:33:54] Program started
+[09-01-2025 02:33:55] Selected city: Bucuresti
+[09-01-2025 02:33:55] Checked employees file
+[09-01-2025 02:33:55] Checked products file
+[09-01-2025 02:33:55] Checked events file
+[09-01-2025 02:33:55] Checked reports file
+[09-01-2025 02:33:55] Stored employees
+[09-01-2025 02:33:55] Stored products
+[09-01-2025 02:33:55] Error storing events: std::bad_alloc
+[09-01-2025 02:35:45] Selected main menu option: 708
+[09-01-2025 02:35:45] Invalid main menu option selected
+[09-01-2025 02:35:51] Program started
+[09-01-2025 02:35:51] Selected city: Bucuresti
+[09-01-2025 02:35:51] Checked employees file
+[09-01-2025 02:35:51] Checked products file
+[09-01-2025 02:35:51] Checked events file
+[09-01-2025 02:35:51] Checked reports file
+[09-01-2025 02:35:51] Stored employees
+[09-01-2025 02:35:51] Stored products
+[09-01-2025 02:35:51] Error storing events: std::bad_alloc
+[09-01-2025 02:35:55] Selected main menu option: 462
+[09-01-2025 02:35:55] Invalid main menu option selected
+[09-01-2025 02:36:05] Program started
+[09-01-2025 02:36:09] Selected city: Bucuresti
+[09-01-2025 02:36:09] Checked employees file
+[09-01-2025 02:36:09] Checked products file
+[09-01-2025 02:36:09] Checked events file
+[09-01-2025 02:36:09] Checked reports file
+[09-01-2025 02:36:09] Stored employees
+[09-01-2025 02:36:09] Stored products
+[09-01-2025 02:36:09] Stored events
+[09-01-2025 02:36:13] Selected main menu option: 541
+[09-01-2025 02:36:13] Invalid main menu option selected
+[09-01-2025 02:37:31] Program started
+[09-01-2025 02:37:34] Selected city: Bucuresti
+[09-01-2025 02:37:34] Checked employees file
+[09-01-2025 02:37:34] Checked products file
+[09-01-2025 02:37:34] Checked events file
+[09-01-2025 02:37:34] Checked reports file
+[09-01-2025 02:37:34] Stored employees
+[09-01-2025 02:37:34] Stored products
+[09-01-2025 02:37:34] Error storing events: std::bad_alloc
+[09-01-2025 02:38:17] Program started
+[09-01-2025 02:38:18] Selected city: Bucuresti
+[09-01-2025 02:38:18] Checked employees file
+[09-01-2025 02:38:18] Checked products file
+[09-01-2025 02:38:18] Checked events file
+[09-01-2025 02:38:18] Checked reports file
+[09-01-2025 02:38:18] Stored employees
+[09-01-2025 02:38:18] Stored products
+[09-01-2025 02:38:18] Unexpected error: std::bad_alloc
+[09-01-2025 02:38:58] Program started
+[09-01-2025 02:39:00] Selected city: Bucuresti
+[09-01-2025 02:39:00] Checked employees file
+[09-01-2025 02:39:00] Checked products file
+[09-01-2025 02:39:00] Checked events file
+[09-01-2025 02:39:00] Checked reports file
+[09-01-2025 02:39:00] Stored employees
+[09-01-2025 02:39:00] Stored products
+[09-01-2025 02:40:46] Program started
+[09-01-2025 02:40:47] Selected city: Bucuresti
+[09-01-2025 02:40:47] Checked employees file
+[09-01-2025 02:40:47] Checked products file
+[09-01-2025 02:40:47] Checked events file
+[09-01-2025 02:40:47] Checked reports file
+[09-01-2025 02:40:47] Stored employees
+[09-01-2025 02:40:47] Stored products
+[09-01-2025 02:40:47] Error storing events: std::bad_alloc
+[09-01-2025 02:40:51] Selected main menu option: 6
+[09-01-2025 02:40:51] Exited main menu
+[09-01-2025 02:40:51] Program ended
+
+[09-01-2025 02:42:54] Program started
+[09-01-2025 02:42:54] Selected city: Bucuresti
+[09-01-2025 02:42:54] Checked employees file
+[09-01-2025 02:42:54] Checked products file
+[09-01-2025 02:42:54] Checked events file
+[09-01-2025 02:42:54] Checked reports file
+[09-01-2025 02:42:54] Stored employees
+[09-01-2025 02:42:54] Stored products
+[09-01-2025 02:42:54] Error storing events: std::bad_alloc
+[09-01-2025 02:43:12] Selected main menu option: 6
+[09-01-2025 02:43:12] Exited main menu
+[09-01-2025 02:43:12] Program ended
+
+[09-01-2025 02:43:12] Selected city: Bucuresti
+[09-01-2025 02:43:12] Checked employees file
+[09-01-2025 02:43:12] Checked products file
+[09-01-2025 02:43:12] Checked events file
+[09-01-2025 02:43:12] Checked reports file
+[09-01-2025 02:43:12] Stored employees
+[09-01-2025 02:43:12] Stored products
+[09-01-2025 02:43:12] Stored events
+[09-01-2025 02:43:14] Selected main menu option: 6
+[09-01-2025 02:43:14] Exited main menu
+[09-01-2025 02:43:14] Program ended
+
+[09-01-2025 02:45:26] Program started
+[09-01-2025 02:45:26] Selected city: Bucuresti
+[09-01-2025 02:45:26] Checked employees file
+[09-01-2025 02:45:26] Checked products file
+[09-01-2025 02:45:26] Checked events file
+[09-01-2025 02:45:26] Checked reports file
+[09-01-2025 02:45:26] Stored employees
+[09-01-2025 02:45:26] Stored products
+[09-01-2025 02:45:26] Error storing events: std::bad_alloc
+[09-01-2025 02:45:59] Selected main menu option: 3
+[09-01-2025 02:45:59] Entered event menu
+[09-01-2025 02:45:59] Selected event menu option: 3
+[09-01-2025 02:45:59] Executed event menu option 3
+[09-01-2025 02:47:33] Program started
+[09-01-2025 02:47:34] Selected city: Bucuresti
+[09-01-2025 02:47:34] Checked employees file
+[09-01-2025 02:47:34] Checked products file
+[09-01-2025 02:47:34] Checked events file
+[09-01-2025 02:47:34] Checked reports file
+[09-01-2025 02:47:34] Stored employees
+[09-01-2025 02:47:34] Stored products
+[09-01-2025 02:47:34] Stored events
+[09-01-2025 02:55:24] Program started
+[09-01-2025 02:55:25] Selected city: Bucuresti
+[09-01-2025 02:55:25] Checked employees file
+[09-01-2025 02:55:25] Checked products file
+[09-01-2025 02:55:25] Checked events file
+[09-01-2025 02:55:25] Checked reports file
+[09-01-2025 02:55:25] Stored employees
+[09-01-2025 02:55:25] Stored products
+[09-01-2025 02:55:25] Error storing events: std::bad_alloc
+[09-01-2025 02:55:29] Selected main menu option: 6
+[09-01-2025 02:55:29] Exited main menu
+[09-01-2025 02:55:29] Program ended
+

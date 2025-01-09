@@ -11,5 +11,6 @@ int mainMenu(std::string city);
 int employeesMenu(std::string city);
 int productsMenu(std::string city);
 int eventMenu(std::string city);
+int eventOrganizerMenu();
 
 #endif

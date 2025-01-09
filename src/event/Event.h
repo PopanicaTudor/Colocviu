@@ -3,6 +3,8 @@
 
 #include <string>
 #include <iostream>
+#include <vector>
+#include <memory>
 
 class Event
 {
@@ -29,6 +31,8 @@ public:
     virtual void displayDetails() const = 0;
     virtual void performEventAction() const = 0;
     virtual void saveEventToCSV(const std::string &filePath) const = 0;
+
+    static void updateEventCSV(const std::vector<std::unique_ptr<Event>> &events, const std::string &filePath);
 };
 
 #endif

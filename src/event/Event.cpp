@@ -1,6 +1,9 @@
 #include "Event.h"
 
 #include <fstream>
+#include <iostream>
+#include <vector>
+#include <memory>
 
 // Constructor
 Event::Event(const std::string& name, const std::string& date, double cost, const std::string &city)
@@ -54,5 +57,25 @@ void Event::setCity(const std::string &city)
 // Afișarea detaliilor evenimentului
 void Event::displayDetails() const
 {
-    std::cout << "Eveniment: " << name << "\nData: " << date << "\nCost: " << cost << " RON\n";
+    std::cout << "Eveniment: " << name << ", Data: " << date << ", Cost: " << cost << " RON";
+}
+
+// Reimprospatarea evenimentelor în fișierul CSV
+void Event::updateEventCSV(const std::vector<std::unique_ptr<Event>> &events,const std::string &filePath)
+{
+    std::ofstream file(filePath);
+    if (file.is_open())
+    {
+        file << "Name,Date,Cost,Type,Details\n";
+        file.close();
+    }
+    else
+    {
+        std::cerr << "Eroare la deschiderea fisierului " << filePath << "\n";
+    }
+
+    for (const auto &event : events)
+    {
+        event->saveEventToCSV(filePath);
+    }
 }

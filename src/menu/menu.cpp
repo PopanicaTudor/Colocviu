@@ -13,8 +13,8 @@ int mainMenu(std::string city)
     std::cout << "\n\tMeniu principal pentru " << city << ":\n";
     std::cout << "1. Gestionare angajati\n";
     std::cout << "2. Gestionare produse\n";
-    std::cout << "3. Simulare comanda\n";
-    std::cout << "4. Organizare eveniment\n";
+    std::cout << "3. Gestionare evenimente\n";
+    std::cout << "4. Simulare comanda\n";
     std::cout << "5. Generare raport\n";
     std::cout << "6. Inapoi la selectare oras\n";
     std::cout << "Optiune: ";
@@ -58,6 +58,21 @@ int productsMenu(std::string city)
 }
 
 int eventMenu(std::string city)
+{
+    std::cout << "\n\tMeniu gestionare evenimente pentru " << city << ":\n";
+    std::cout << "1. Organizare eveniment nou\n";
+    std::cout << "2. Stergere eveniment existent\n";
+    std::cout << "3. Afisare evenimente existente\n";
+    std::cout << "4. Inapoi la meniul principal\n";
+    std::cout << "Optiune: ";
+
+    int eventChoice;
+    std::cin >> eventChoice;
+
+    return eventChoice;
+}
+
+int eventOrganizerMenu()
 {
     std::cout << "\n\tSelectati tipul de eveniment:\n";
     std::cout << "1. Degustare de cafea\n";

@@ -2,61 +2,83 @@
 
 #include <fstream>
 #include <sstream>
-#include <iostream>
-#include <algorithm>
+#include <string>
+#include <vector>
+#include <map>
 
-CSVParser::CSVParser(const std::string &filename) : filename(filename) {}
+CSVParser::CSVParser(const std::string &filename)
+    : filename(filename) {}
 
-// Metodă pentru citirea datelor din fișierul CSV
-std::vector<std::map<std::string, std::string>> CSVParser::readCSV()
+std::vector<std::map<std::string, std::string>> CSVParser::readCSV(std::string filename)
 {
-    std::vector<std::map<std::string, std::string>> data;
     std::ifstream file(filename);
-
     if (!file.is_open())
     {
-        std::cerr << "Error: Could not open file " << filename << std::endl;
-        return data;
+        throw std::runtime_error("Could not open file");
     }
 
+    std::vector<std::map<std::string, std::string>> rows;
     std::string line;
     std::vector<std::string> headers;
 
-    // Citim antetul
+    // Read headers
     if (std::getline(file, line))
     {
-        std::stringstream headerStream(line);
-        std::string header;
-        while (std::getline(headerStream, header, ','))
-        {
-            header.erase(std::remove_if(header.begin(), header.end(), ::isspace), header.end());
-            headers.push_back(header);
-        }
+        headers = parseLine(line);
     }
 
-    // Citim fiecare linie de date
+    // Read data
     while (std::getline(file, line))
     {
-        std::stringstream lineStream(line);
-        std::string cell;
-        std::map<std::string, std::string> row;
-
-        for (size_t i = 0; i < headers.size(); ++i)
+        std::vector<std::string> values = parseLine(line);
+        if (values.size() == headers.size())
         {
-            if (std::getline(lineStream, cell, ','))
+            std::map<std::string, std::string> row;
+            for (size_t i = 0; i < headers.size(); ++i)
             {
-                cell.erase(std::remove_if(cell.begin(), cell.end(), ::isspace), cell.end());
-                row[headers[i]] = cell;
+                row[headers[i]] = values[i];
             }
-            else
-            {
-                row[headers[i]] = "";
-            }
+            rows.push_back(row);
         }
-
-        data.push_back(row);
     }
 
     file.close();
-    return data;
+    return rows;
+}
+
+std::vector<std::string> CSVParser::parseLine(const std::string &line)
+{
+    std::vector<std::string> result;
+    std::istringstream stream(line);
+    std::string cell;
+    bool insideQuotes = false;
+    std::string current;
+
+    for (char ch : line)
+    {
+        if (ch == '"' && !insideQuotes)
+        {
+            insideQuotes = true;
+        }
+        else if (ch == '"' && insideQuotes)
+        {
+            insideQuotes = false;
+        }
+        else if (ch == ',' && !insideQuotes)
+        {
+            result.push_back(current);
+            current.clear();
+        }
+        else
+        {
+            current += ch;
+        }
+    }
+
+    if (!current.empty())
+    {
+        result.push_back(current);
+    }
+
+    return result;
 }

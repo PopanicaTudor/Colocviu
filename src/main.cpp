@@ -2,11 +2,12 @@
 #include "util/SelectCity.h"
 #include "util/StoreEmployees.h"
 #include "util/StoreProducts.h"
+#include "util/StoreEvents.h"
 #include "menu/Menu.h"
 #include "menu/EmployeeChoices.h"
 #include "menu/ProductChoices.h"
 #include "menu/OrderSimulation.h"
-#include "menu/EventOrganizer.h"
+#include "menu/EventOrganizerChoices.h"
 #include "menu/EventChoices.h"
 #include "menu/ReportGenerator.h"
 #include "util/Logger.h"
@@ -27,7 +28,7 @@ int main()
         logger = Logger::getInstance();
         logger->log("Program started");
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << "A aparut o eroare la initializarea logger-ului: " << e.what() << "\n";
     }
@@ -176,6 +177,28 @@ int main()
                 logger->log("Error storing products: " + std::string(e.what()));
             }
 
+            // Stochează evenimentele
+            std::vector<std::unique_ptr<Event>> events;
+            try
+            {
+                events = storeEvents(eventsFilePath);
+
+                logger->log("Stored events");
+            }
+            catch (const std::exception &e)
+            {
+                std::cerr << "A aparut o eroare la stocarea evenimentelor: " << e.what() << "\n";
+
+                logger->log("Error storing events: " + std::string(e.what()));
+            }
+
+            // DEBUG: Afisarea evenimentelor
+
+            for (const auto &event : events)
+            {
+                event->displayDetails();
+            }
+
             /// Meniul principal
             while (true)
             {
@@ -200,6 +223,8 @@ int main()
                     /// Meniul de gestionare a angajaților
                     while (true)
                     {
+                        logger->log("Entered employees menu");
+
                         // Alegerea unei opțiuni din meniul angajaților
                         int empChoice;
                         try
@@ -290,6 +315,8 @@ int main()
                 }
                 else if (mainChoice == 2)
                 {
+                    logger->log("Entered products menu");
+
                     /// Meniul de gestionare a produselor
                     while (true)
                     {
@@ -383,6 +410,88 @@ int main()
                 }
                 else if (mainChoice == 3)
                 {
+                    logger->log("Entered event menu");
+
+                    /// Meniul de gestionare a evenimentelor
+                    while (true)
+                    {
+                        // Alegerea unei opțiuni din meniul evenimentelor
+                        int eventChoice;
+                        try
+                        {
+                            eventChoice = eventMenu(selectedCity);
+
+                            logger->log("Selected event menu option: " + std::to_string(eventChoice));
+                        }
+                        catch (const std::exception &e)
+                        {
+                            std::cerr << "A aparut o eroare la afisarea meniului pentru evenimente: " << e.what() << "\n";
+
+                            logger->log("Error selecting event menu option: " + std::string(e.what()));
+                            continue;
+                        }
+
+                        if (eventChoice == 1)
+                        {
+                            try
+                            {
+                                eventChoice1(eventsFilePath, events);
+
+                                logger->log("Executed event menu option 1");
+                            }
+                            catch (const std::exception &e)
+                            {
+                                std::cerr << "A aparut o eroare la executarea optiunii 1 pentru evenimente: " << e.what() << "\n";
+
+                                logger->log("Error executing event menu option 1: " + std::string(e.what()));
+                            }
+                        }
+                        else if (eventChoice == 2)
+                        {
+                            try
+                            {
+                                eventChoice2(eventsFilePath, events);
+
+                                logger->log("Executed event menu option 2");
+                            }
+                            catch (const std::exception &e)
+                            {
+                                std::cerr << "A aparut o eroare la executarea optiunii 2 pentru evenimente: " << e.what() << "\n";
+
+                                logger->log("Error executing event menu option 2: " + std::string(e.what()));
+                            }
+                        }
+                        else if (eventChoice == 3)
+                        {
+                            try
+                            {
+                                eventChoice3(selectedCity, events);
+
+                                logger->log("Executed event menu option 3");
+                            }
+                            catch (const std::exception &e)
+                            {
+                                std::cerr << "A aparut o eroare la executarea optiunii 3 pentru evenimente: " << e.what() << "\n";
+
+                                logger->log("Error executing event menu option 3: " + std::string(e.what()));
+                            }
+                        }
+                        else if (eventChoice == 4)
+                        {
+                            logger->log("Exited event menu");
+                            break;
+                        }
+                        else
+                        {
+                            std::cout << "Optiune invalida. Reincercati!\n";
+                            logger->log("Invalid event menu option selected");
+                        }
+                    }
+                }
+                else if (mainChoice == 4)
+                {
+                    logger->log("Entered order simulation");
+
                     /// Simularea unei comenzi
                     try
                     {
@@ -395,22 +504,6 @@ int main()
                         std::cerr << "A aparut o eroare la simularea comenzii: " << e.what() << "\n";
 
                         logger->log("Error executing order simulation: " + std::string(e.what()));
-                    }
-                }
-                else if (mainChoice == 4)
-                {
-                    /// Organizarea unui eveniment
-                    try
-                    {
-                        eventOrganizer(selectedCity);
-
-                        logger->log("Executed event organizer");
-                    }
-                    catch (const std::exception &e)
-                    {
-                        std::cerr << "A aparut o eroare la organizarea evenimentului: " << e.what() << "\n";
-
-                        logger->log("Error executing event organizer: " + std::string(e.what()));
                     }
                 }
                 else if (mainChoice == 5)
