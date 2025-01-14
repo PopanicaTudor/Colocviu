@@ -45,6 +45,6 @@ This project implements an application for managing the activities of a coffee s
 
 ## Additional Files
 
-- **Demo Video:** A 90-second video demonstrating a complete workflow of the application.
+- **Demo Video:** A 2-minute video demonstrating a complete workflow of the application.
 - **Testing Matrix:** At least 20 validated functional tests.
 - **Architecture Diagram:** A graphical representation of the application's structure.
